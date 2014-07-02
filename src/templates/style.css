@@ -5,19 +5,19 @@
 }
 
 /* This is the banner, which is just a plain color right now. Img should go here */
-#header {
-	display: block;
+
+.banner {
 	height: 200px;
-	background-color: #A52A2A;
+	margin: -8px -8px 0 -8px;
+	background-image: url("img/stock-banner.jpg");
 }
 
 /* Encompasses all elements under the header. */
 #container {
 	display: block;
 	margin: 10px auto;
-	width: 700px;
+	width: 900px;
 	overflow: auto;
-	height: 360px;
 }
 
 /* Navigation sidebar. */
@@ -69,10 +69,23 @@
 }
 
 /* News feed. */
-#feed {
+.feed {
 	float: left;
 	margin-left: 2%;
 	margin-top: -3%;
 	width: 77%;
 	height: 80%;
+}
+
+.post {
+	position: relative;
+}
+
+time {
+	margin-top: 10px;
+	display: inline-block;
+	color: #9EABB3;
+}
+.post h1 {
+	margin-top: -2px;
 }
