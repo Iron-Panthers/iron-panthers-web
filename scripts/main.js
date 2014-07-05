@@ -22,7 +22,7 @@
 	}
 
 	var module = angular.module("ironBlog", []);
-	
+
 	module.directive("isoTime", function() {
 		return {
 			link: function (scope, element, attrs) {
@@ -32,6 +32,8 @@
 			}
 		}
 	});
+
+	readText("/text-content/blogs.json");
 
 	module.controller("BlogController", ["$scope", function($scope) {
 		$scope.blogs = [];
@@ -54,3 +56,16 @@
 
 	}]);
 })();
+
+function parseBlogs() {
+
+}
+
+function readText(filename) {
+	var xhr = new XMLHttpRequest();
+	xhr.onload = function() {
+		console.log(this.responseText);
+	}
+	xhr.open("get", "filename", true);
+	xhr.send();
+}
