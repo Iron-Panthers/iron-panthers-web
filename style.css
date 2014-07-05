@@ -10,7 +10,7 @@
 .banner {
 	height: 200px;
 	margin: -8px -8px 0 -8px;
-	background-image: url("stock-banner.jpg");
+	background-image: url("imgs/stock-banner.jpg");
 }
 
 /* Encompasses all elements under the header. */
