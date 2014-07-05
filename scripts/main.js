@@ -33,32 +33,31 @@
         }
     });
 
-    readText("http://fsxfreak.github.io/iron-panthers-web/text-content/blogs.json");
+    var parsedBlogs = parseBlogs();
 
     module.controller("BlogController", ["$scope", function($scope) {
         $scope.blogs = [];
-        $scope.blogs.push(new Blog(
-                "Header"
-              , "Author"
-              , "Team"
-              , new Date(2014, 6, 1)
-              , "Text"
-            )
-        );
-        $scope.blogs.push(new Blog(
-                "Header2"
-              , "Author2"
-              , "Team2"
-              , new Date(2014, 5, 30)
-              , "Text2"
-            )
-        );
 
+        for (var i = 0; i < parsedBlogs.blogs.length; i++)
+        {
+            var blog = parsedBlogs.blogs[i];
+
+            $scope.blogs.push(new Blog(
+                    blog.header
+                  , blog.author
+                  , blog.team
+                  , new Date(blog.date[0], blog.date[1], blog.date[2])
+                  , blog.text
+                )
+            );
+        }
     }]);
 })();
 
 function parseBlogs() {
-
+    var json = 
+        readText("http://fsxfreak.github.io/iron-panthers-web/text-content/blogs.json");
+    return json;
 }
 
 function readText(filename) {
