@@ -33,13 +33,13 @@
     });
 
     var parsedBlogs;
-    
+
     function readBlogs() {
         var xhr = new XMLHttpRequest();
         xhr.overrideMimeType("application/json");
         xhr.onreadystatechange = function() {
             var result = xhr.responseText;
-            parsedBlogs.push(JSON.parse(result));
+            parsedBlogs = JSON.parse(result);
         }
         //TODO: url needs to be changed for final server
         xhr.open("get", "http://fsxfreak.github.io/iron-panthers-web/text-content/blogs.json", true);
