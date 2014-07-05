@@ -33,7 +33,7 @@
 		}
 	});
 
-	readText("/text-content/blogs.json");
+	readText("#/text-content/blogs.json");
 
 	module.controller("BlogController", ["$scope", function($scope) {
 		$scope.blogs = [];
