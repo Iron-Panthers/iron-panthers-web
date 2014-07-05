@@ -80,7 +80,7 @@ title {
 .feed {
 	float: left;
 	margin-left: 2%;
-	margin-top: -3%;
+	margin-top: 0%;	//this was -3%, any reason for that Stanley?
 	width: 77%;
 	height: 80%;
 }
