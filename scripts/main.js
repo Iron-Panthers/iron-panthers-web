@@ -21,7 +21,39 @@
         return month + " " + day + ", " + year;
     }
 
-    var module = angular.module("ironBlog", []);
+    var module = angular.module("ironBlog", ["ngRoute"]);
+
+    module.service('ParseBlogService', function($http) {
+        this.getParsedBlog = function() {
+            var promise = $http.get("http://fsxfreak.github.io/iron-panthers-web/text-content/blogs.json")
+                .then(function (response) {
+                    return response.data;
+            });
+            return promise;
+        }
+    });
+
+    module.controller("BlogController", function($scope, ParseBlogService) {
+        $scope.blogs = [];
+        ParseBlogService.getParsedBlog().then(function (data) {
+            console.log(data);
+            parsedBlogs = data;
+
+            for (var i = 0; i < parsedBlogs.blogs.length; i++)
+            {
+                var blog = parsedBlogs.blogs[i];
+
+                $scope.blogs.push(new Blog(
+                        blog.header
+                      , blog.author
+                      , blog.team
+                      , new Date(blog.date[0], blog.date[1], blog.date[2])
+                      , blog.text
+                    )
+                );
+            }
+        });
+    });
 
     module.directive("isoTime", function() {
         return {
@@ -31,39 +63,4 @@
             }
         }
     });
-
-    var parsedBlogs;
-
-    function readBlogs() {
-        var xhr = new XMLHttpRequest();
-        xhr.overrideMimeType("application/json");
-        xhr.onreadystatechange = function() {
-            var result = xhr.responseText;
-            parsedBlogs = JSON.parse(result);
-        }
-        //TODO: url needs to be changed for final server
-        xhr.open("get", "http://fsxfreak.github.io/iron-panthers-web/text-content/blogs.json", true);
-        xhr.send();
-    }
-
-    readBlogs();
-    console.log(parsedBlogs);
-
-    module.controller("BlogController", ["$scope", function($scope) {
-        $scope.blogs = [];
-
-        for (var i = 0; i < parsedBlogs.blogs.length; i++)
-        {
-            var blog = parsedBlogs.blogs[i];
-
-            $scope.blogs.push(new Blog(
-                    blog.header
-                  , blog.author
-                  , blog.team
-                  , new Date(blog.date[0], blog.date[1], blog.date[2])
-                  , blog.text
-                )
-            );
-        }
-    }]);
 })();
