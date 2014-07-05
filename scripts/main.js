@@ -66,6 +66,6 @@ function readText(filename) {
 	xhr.onload = function() {
 		console.log(this.responseText);
 	}
-	xhr.open("get", "filename", true);
+	xhr.open("get", filename, true);
 	xhr.send();
 }
