@@ -46,6 +46,8 @@
         xhr.send();
     }
 
+    console.log(parsedBlogs);
+
     module.controller("BlogController", ["$scope", function($scope) {
         $scope.blogs = [];
 
