@@ -1,10 +1,31 @@
 (function () {
 	var module = angular.module("ironBlog", []);
 	module.controller("BlogController", ["$scope", function($scope) {
-		$scope.header = "robot revitalized with tape";
-		$scope.author = "bobby joe";
-		$scope.date = "oh god date parsing"
-		$scope.text = "test text";
-		console.log($scope.text);
+		var Blog = function(header, author, team, date, text) {
+			this.header = header;
+			this.author = author;
+			this.team   = team;
+			this.date   = date;	//should be a Date object, for different Date formats
+			this.text   = text;
+		}
+
+		$scope.blogs = [];
+		$scope.blogs.push(new Blog(
+				"Header"
+			  , "Author"
+			  , "Team"
+			  , "Date"
+			  , "Text"
+			)
+		);
+		$scope.blogs.push(new Blog(
+				"Header2"
+			  , "Author2"
+			  , "Team2"
+			  , "Date2"
+			  , "Text2"
+			)
+		);
+
 	}]);
 })();
