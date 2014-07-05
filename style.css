@@ -2,19 +2,32 @@
 
 * {
 	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+	display: block;
+}
+title {
+	display: none;
 }
 
-/* This is the banner, which is just a plain color right now. Img should go here */
-
+/* Header image. */
 .banner {
-	height: 200px;
-	margin: -8px -8px 0 -8px;
-	background-image: url("img/stock-banner.jpg");
+	background-color: #FF0D0D;
+	background-size: 100%;
+    background-position: top center;
+    height: 200px;
+    margin: -8px -8px 0 -8px;
+    /* Not sure how to make this more reponsive. When the screen resizes, the banner gets too tiny. I want
+    to set a minimum height, but it doesn't work. */
+}
+.banner-header {
+	position: absolute;
+	top: 8%;
+	left: 42%;
+	color: rgb(255, 255, 255);
 }
 
 /* Encompasses all elements under the header. */
 #container {
-	display: block;
 	margin: 10px auto;
 	width: 900px;
 	overflow: auto;
@@ -23,7 +36,6 @@
 /* Navigation sidebar. */
 #sidebar {
 	float: left;
-	display: block;
 	margin: 0 auto;
 	width: 20%;
 	list-style: none;
@@ -40,31 +52,27 @@
 #sidebar:hover {
 	border-left-color: #FF0D0D;
 }
-#sidebar>li {
-	font-weight: 500;
+#sidebar li {
 	font-size: 20px;
-	padding: 7% 0;
-	/*padding: 7% 0*/;
+	padding: 4% 0;
+	padding-left: 20%;
 	transition: background-color .2s;
 		transition-property: background-color;
 		transition-duration: 0.2s;
 		transition-timing-function: initial;
 		transition-delay: initial;
 }
-#sidebar>li:hover {
-	background-color: #D7E29F;
+#sidebar li:hover {
+	background-color: rgb(255, 235, 132);
 }
-#sidebar>li>a {
-	/*Can't figure out how to make the entire list item clickable
-	  (i.e. the highlighted section). I can't get the right margin
-	  to be linkable. */
-	padding-left: 20%;
+#sidebar a {
 	padding-top: 3.5%;
 	padding-bottom: 3.5%;
 	text-decoration: none;
 	color: rgb(155, 155, 155);
 }
-#sidebar>li>a:hover {
+
+#sidebar a:hover {
 	color: rgb(0, 0, 0);
 }
 
@@ -72,15 +80,13 @@
 .feed {
 	float: left;
 	margin-left: 2%;
-	margin-top: -3%;
+	margin-top: 0%;	//this was -3%, any reason for that Stanley?
 	width: 77%;
 	height: 80%;
 }
-
 .post {
 	position: relative;
 }
-
 time {
 	margin-top: 10px;
 	display: inline-block;
@@ -88,4 +94,30 @@ time {
 }
 .post h1 {
 	margin-top: -2px;
+}
+
+/* Footer, where credits are given. */
+#footer {
+	text-align: center;
+	font-size: 12px;
+	margin-top: 12px;
+}
+#footer a {
+	text-decoration: none;
+	-webkit-transition: color .3s;
+	-o-transition: color .3s;
+	-moz-transition: color .3s;
+	color: #9EABB3;
+}
+#footer a:visited {
+	color: #9EABB3;
+}
+#footer a:hover { 
+	-webkit-transition-duration: .3s;
+	-o-transition-duration: .3s;
+	-moz-transition-duration: .3s;
+	color: #3399CC; 
+}
+#footer a:active {
+	color: #3399FF;
 }
