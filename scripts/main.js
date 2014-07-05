@@ -46,6 +46,7 @@
         xhr.send();
     }
 
+    readBlogs();
     console.log(parsedBlogs);
 
     module.controller("BlogController", ["$scope", function($scope) {
