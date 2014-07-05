@@ -26,7 +26,7 @@
 						<header class="post">
 							<!-- TODO: Use Date class so we can fill 
 							in both plaintext date and datetime date -->
-							<span><time datetime="2014-07-01">{{ blog.date }}</time></span>
+							<span><time x-iso-time="{{ blog.date.toISOString() }}">{{ blog.getDatePlain() }}</a></span>
 							<h1>{{ blog.header }}</h1>
 						</header>
 						<p>{{ blog.text }}</p>
