@@ -57,12 +57,14 @@
 function parseBlogs() {
     var json = 
         readText("http://fsxfreak.github.io/iron-panthers-web/text-content/blogs.json");
+    console.log(json);
     return JSON.parse(json);
 }
 
 function readText(filename) {
     var xhr = new XMLHttpRequest();
+    xhr.overrideMimeType("application/json");
     xhr.open("get", filename, true);
     xhr.send();
-    return this.responseText;
+    return xhr.responseText;
 }
