@@ -32,7 +32,7 @@
         }
     });
 
-    var parsedBlogs;
+    var parsedBlogs = "";
 
     function readBlogs() {
         var xhr = new XMLHttpRequest();
