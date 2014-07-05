@@ -28,12 +28,23 @@
             link: function (scope, element, attrs) {
                 var time = attrs.myIsoTime;
                 attrs.$set('timedate', time);
-                //fill in the datetime with the correct time format
             }
         }
     });
 
-    var parsedBlogs = parseBlogs();
+    var parsedBlogs;
+    
+    function readBlogs() {
+        var xhr = new XMLHttpRequest();
+        xhr.overrideMimeType("application/json");
+        xhr.onreadystatechange = function() {
+            var result = xhr.responseText;
+            parsedBlogs.push(JSON.parse(result));
+        }
+        //TODO: url needs to be changed for final server
+        xhr.open("get", "http://fsxfreak.github.io/iron-panthers-web/text-content/blogs.json", true);
+        xhr.send();
+    }
 
     module.controller("BlogController", ["$scope", function($scope) {
         $scope.blogs = [];
@@ -53,18 +64,3 @@
         }
     }]);
 })();
-
-function parseBlogs() {
-    var json = 
-        readText("http://fsxfreak.github.io/iron-panthers-web/text-content/blogs.json");
-    console.log(json);
-    return JSON.parse(json);
-}
-
-function readText(filename) {
-    var xhr = new XMLHttpRequest();
-    xhr.overrideMimeType("application/json");
-    xhr.open("get", filename, true);
-    xhr.send();
-    return xhr.responseText;
-}
