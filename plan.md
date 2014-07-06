@@ -8,3 +8,6 @@
 * No comments section. looks bad
 * Blogs should have permalink
 * Navigation bar at the top as header bar, drop down to the side of our content
+* Once the team is solidified we can set up a description for each team member in blogs.json, with their name, team, grade
+* Some backend stuff needed to be done for the contact form so that the message is properly sent. Dunno if angular has something for e-mails
+* For some reason when you switch between the home tab on the navigation bar, the div moves ever so slightly, idk why. I'll look into it
