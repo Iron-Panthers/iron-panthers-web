@@ -1,0 +1,19 @@
+<h1>Team Roster</h1>
+<!-- don't know why this table is being a bitch, i'll fix it later -->
+<table ng-controller="RosterController" id="rosterTable" summary="Roster of Team Members">
+	<thead>
+		<tr>
+			<th scope="col">Name</th>
+			<th scope="col">Grade</th>
+			<th scope="col">Team</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="name in names">
+			<td>{{ name }}</td>
+		</tr>
+		<tr ng-repeat="i in [10, 11, 12, 9]">
+			<td>{{ i }}</td>
+		</tr>
+	</tbody>
+</table>

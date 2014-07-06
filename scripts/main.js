@@ -53,10 +53,33 @@
                 );
             }
         });
-
         this.showMore = function() {
             // This is supposed to expand the text of the post description. Not sure how to approach this one for now. I'll think of something. Seriously, let me do it lol
         }
+    });
+
+    module.controller("RosterController", function($scope, ParseJSONService) {
+        $scope.names = [];
+         ParseJSONService.getParsedJSON().then(function (data) {
+            var parsedJSON = data;
+
+            for (var i = 0; i < parsedJSON.names.length; i++) {
+                var name = parsedJSON.names[i];
+                $scope.names.push(name);
+            }
+        });
+    });
+
+    module.controller("NavigationController", function() {
+        this.page = 1;
+
+        this.isPage = function(checkPage) {
+            return this.page === checkPage;
+        };
+
+        this.setPage = function(selectedPage) {
+            this.page = selectedPage;
+        }; 
     });
 
     // Not completely necessary now but I think this'll help with the clutter later since we're going to be loading a lot on the single index page.
@@ -64,6 +87,20 @@
         return {
             restrict: "E",
             templateUrl: "post-preview.html"
+        }
+    });
+
+    module.directive("rosterTable", function() { 
+        return {
+            restrict: "E",
+            templateUrl: "roster-table.html"
+        }
+    });
+
+    module.directive("contact", function() {
+        return {
+            restrict: "E",
+            templateUrl: "contact.html"
         }
     });
 

@@ -1,15 +1,13 @@
-<main class="posts" role="main" ng-controller="BlogController as blogCtrl">
-	<div class="postEntry" ng-repeat="blog in blogs">
-		<article>
-			<header>
-				<!-- TODO: Use Date class so we can fill 
-				in both plaintext date and datetime date -->
-				<span><time x-iso-time="{{ blog.date.toISOString() }}">{{ blog.getDatePlain() }}</time></span>
-				<h1>{{ blog.header }}</h1>
-				<h2>—{{ blog.author }}, {{ blog.team }}</h2>
-			</header>
-            <img ng-show="blog.links.length" ng-src="{{ blog.links[0] }}" />
-			<p>{{ blog.text | limitTo: 250}}...<a href ng-click="blogCtrl.showMore()">Read more</a></p>
-		</article>
-	</div>
-</main>
+<div class="postEntry" ng-repeat="blog in blogs">
+	<article>
+		<header>
+			<!-- TODO: Use Date class so we can fill 
+			in both plaintext date and datetime date -->
+			<span><time x-iso-time="{{ blog.date.toISOString() }}">{{ blog.getDatePlain() }}</time></span>
+			<h1>{{ blog.header }}</h1>
+			<h2>—{{ blog.author }}, {{ blog.team }}</h2>
+		</header>
+        <img ng-show="blog.links.length" ng-src="{{ blog.links[0] }}" />
+		<p>{{ blog.text | limitTo: 250}}...<a href ng-click="blogCtrl.showMore()">Read more</a></p>
+	</article>
+</div>
