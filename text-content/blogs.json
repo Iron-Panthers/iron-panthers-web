@@ -6,7 +6,7 @@
             "team"  : "Webmaster",
             "date"  : ["2014", "6", "1"],
             "text"  : "We appreciate you checking out our website! However, you caught us at a bit of a bad time, because we're remaking the site! It's going to be pretty sweet, and so much better than the last one. So nothing on the website works right now. Sorry!",
-            "links": ["imgs/seniors.jpg", "imgs/stock-banner.jpg"] // If we do multiple pictures, the posts aren't going to follow a universal template anymore, since they wouldn't all be in the same place (after the first picture), meaning you'd have to create a unique blog post every time. So maybe we just have one picture max for every post, and then we can make a gallery with more if people wanna see, to make it easier when someone updates the blog.
+            "links": ["imgs/seniors.jpg", "imgs/stock-banner.jpg"] 
         }
       , {
             "header": "Use Protection with Pointers",
