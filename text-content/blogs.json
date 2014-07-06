@@ -24,5 +24,13 @@
             "text"  : "Pointers are commonly used to point at the first element in an array. This is necessary when an array type itself cannot be used, such as when the array has dynamic length or as the parameter of a function. The usual array indexing syntax can be applied to the pointer, so it can largely be treated as though it were an array. Using pointers in this way is ambiguous because nothing about the type actually says it's pointing at an element in an array.",
             "links": ["imgs/seniors.jpg"]
         }
+    ],
+    
+    "names": [
+            "Leon Cheungbaby",
+            "Panderz",
+            "FsxFreak",
+            "Kyle Cheungdaddy",
+            "Jpdstan"
     ]
 }
