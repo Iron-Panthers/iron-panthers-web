@@ -29,6 +29,7 @@
 							<span><time x-iso-time="{{ blog.date.toISOString() }}">{{ blog.getDatePlain() }}</a></span>
 							<h1>{{ blog.header }}</h1>
 						</header>
+                        <a href='#'><img ng-repeat="link in blog.links" ng-src="{{ link }}"/></a>
 						<p>{{ blog.text }}</p>
 					</article>
 				</div>

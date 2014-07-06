@@ -1,10 +1,11 @@
 (function () {
-    var Blog = function(header, author, team, date, text) {
+    var Blog = function(header, author, team, date, text, imgLinks) {
         this.header = header;
         this.author = author;
         this.team   = team;
         this.date   = date; //should be a Date object, for different Date formats
         this.text   = text;
+        this.links  = imgLinks
     }
 
     //TODO - Do we want to be American or international?
@@ -23,9 +24,9 @@
 
     var module = angular.module("ironBlog", []);
 
-    module.service('ParseBlogService', function($http) {
-        this.getParsedBlog = function() {
-            var promise = $http.get("http://fsxfreak.github.io/iron-panthers-web/text-content/blogs.json")
+    module.service('ParseJSONService', function($http) {
+        this.getParsedJSON = function() {
+            var promise = $http.get("/text-content/blogs.json")
                 .then(function (response) {
                     return response.data;
             });
@@ -33,15 +34,14 @@
         }
     });
 
-    module.controller("BlogController", function($scope, ParseBlogService) {
+    module.controller("BlogController", function($scope, ParseJSONService) {
         $scope.blogs = [];
-        ParseBlogService.getParsedBlog().then(function (data) {
-            console.log(data);
-            parsedBlogs = data;
+        ParseJSONService.getParsedJSON().then(function (data) {
+            var parsedJSON = data;
 
-            for (var i = 0; i < parsedBlogs.blogs.length; i++)
+            for (var i = 0; i < parsedJSON.blogs.length; i++)
             {
-                var blog = parsedBlogs.blogs[i];
+                var blog = parsedJSON.blogs[i];
 
                 $scope.blogs.push(new Blog(
                         blog.header
@@ -49,6 +49,7 @@
                       , blog.team
                       , new Date(blog.date[0], blog.date[1], blog.date[2])
                       , blog.text
+                      , blog.links
                     )
                 );
             }
