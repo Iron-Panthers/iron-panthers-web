@@ -21,7 +21,7 @@
         return month + " " + day + ", " + year;
     }
 
-    var module = angular.module("ironBlog", ["ngRoute"]);
+    var module = angular.module("ironBlog", []);
 
     module.service('ParseBlogService', function($http) {
         this.getParsedBlog = function() {
