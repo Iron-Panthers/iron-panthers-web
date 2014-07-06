@@ -20,20 +20,8 @@
 					<a href="/contact.html"><li>Contact us</li></a>
 				</ul>
 			</nav>
-			<main class="feed" role="main" ng-controller="BlogController">
-				<div ng-repeat="blog in blogs">
-					<article class="post">
-						<header class="post">
-							<!-- TODO: Use Date class so we can fill 
-							in both plaintext date and datetime date -->
-							<span><time x-iso-time="{{ blog.date.toISOString() }}">{{ blog.getDatePlain() }}</a></span>
-							<h1>{{ blog.header }}</h1>
-						</header>
-                        <a href='#'><img ng-repeat="link in blog.links" ng-src="{{ link }}"/></a>
-						<p>{{ blog.text }}</p>
-					</article>
-				</div>
-			</main>
+			<!-- Post feed of blog. -->
+			<post-preview></post-preview>
 			<hr />
 		</div>
 		<div id="footer"><a href="https://github.com/fsxfreak/iron-panthers-web">Site created by Stanley Kwong and Leon Cheung. Copyright &copy; 2014.</a></div>

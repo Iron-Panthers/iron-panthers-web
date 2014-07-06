@@ -26,7 +26,7 @@
 
     module.service('ParseJSONService', function($http) {
         this.getParsedJSON = function() {
-            var promise = $http.get("/text-content/blogs.json")
+            var promise = $http.get("text-content/blogs.json")
                 .then(function (response) {
                     return response.data;
             });
@@ -39,8 +39,7 @@
         ParseJSONService.getParsedJSON().then(function (data) {
             var parsedJSON = data;
 
-            for (var i = 0; i < parsedJSON.blogs.length; i++)
-            {
+            for (var i = 0; i < parsedJSON.blogs.length; i++) {
                 var blog = parsedJSON.blogs[i];
 
                 $scope.blogs.push(new Blog(
@@ -54,6 +53,18 @@
                 );
             }
         });
+
+        this.showMore = function() {
+            // This is supposed to expand the text of the post description. Not sure how to approach this one for now. I'll think of something. Seriously, let me do it lol
+        }
+    });
+
+    // Not completely necessary now but I think this'll help with the clutter later since we're going to be loading a lot on the single index page.
+    module.directive("postPreview", function() { 
+        return {
+            restrict: "E",
+            templateUrl: "post-preview.html"
+        }
     });
 
     module.directive("isoTime", function() {
