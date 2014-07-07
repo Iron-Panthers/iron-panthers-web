@@ -1,11 +1,12 @@
 (function () {
-    var Blog = function(header, author, team, date, text, imgLinks) {
+    var Blog = function(header, author, team, date, text, imgLinks, index) {
         this.header = header;
         this.author = author;
         this.team   = team;
         this.date   = date; //should be a Date object, for different Date formats
         this.text   = text;
         this.links  = imgLinks
+        this.index  = index;
     }
 
     //TODO - Do we want to be American or international?
@@ -26,7 +27,7 @@
 
     module.service('ParseJSONService', function($http) {
         this.getParsedJSON = function() {
-            var promise = $http.get("text-content/blogs.json")
+            var promise = $http.get("http://jpdstan.github.io/iron-panthers-web/text-content/blogs.json")
                 .then(function (response) {
                     return response.data;
             });
@@ -49,13 +50,18 @@
                       , new Date(blog.date[0], blog.date[1], blog.date[2])
                       , blog.text
                       , blog.links
+                      , blog.index
                     )
                 );
             }
         });
-        this.showMore = function() {
-            // This is supposed to expand the text of the post description. Not sure how to approach this one for now. I'll think of something. Seriously, let me do it lol
+
+        /* The issue with this is that only the first post is changed, rather than whatever post is clicked on. I don't know how to single out an individual post. I'll try to fix this. */
+        $scope.showMore = function(text) {
+            var shortTxt = document.getElementById("postPreview");
+            shortTxt.innerHTML = text; 
         }
+
     });
 
     module.controller("RosterController", function($scope, ParseJSONService) {
