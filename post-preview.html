@@ -8,6 +8,6 @@
 			<h2>—{{ blog.author }}, {{ blog.team }}</h2>
 		</header>
         <img ng-show="blog.links.length" ng-src="{{ blog.links[0] }}" />
-		<p>{{ blog.text | limitTo: 250}}...<a href ng-click="blogCtrl.showMore()">Read more</a></p>
+		<p id="postPreview">{{ blog.text | limitTo: 200 }}...<a href ng-click="showMore(blog.text)">Read more</a></p>
 	</article>
 </div>
