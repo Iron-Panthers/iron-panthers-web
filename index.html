@@ -14,9 +14,9 @@
 		<div id="container" ng-controller="NavigationController as navi">
 			<nav>
 				<ul id="sidebar">
-					<a href><li ng-click="navi.setPage(1)" ng-class="{ active:navi.isPage(1) }">Home</li></a>
-					<a href ng-click="navi.setPage(2)"><li ng-class="{ active:navi.isPage(2) }">Roster</li></a>
-					<a href ng-click="navi.setPage(3)" ng-class="{ active:navi.isPage(3) }"><li>Apply</li></a>
+					<li ng-class="{ active:navi.isPage(1) }"><a href ng-click="navi.setPage(1)">Home</a></li>
+					<li ng-class="{ active:navi.isPage(2) }"><a href ng-click="navi.setPage(2)">Roster</a></li>
+					<li ng-class="{ active:navi.isPage(3) }"><a href ng-click="navi.setPage(3)">Apply</a></li>
 					<li ng-class="{ active:navi.isPage(4) }"><a href ng-click="navi.setPage(4)">Contact us</a></li>
 				</ul>
 			</nav>
