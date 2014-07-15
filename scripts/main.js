@@ -23,7 +23,7 @@
         return month + " " + day + ", " + year;
     }
 
-    var module = angular.module("ironBlog", []);
+    var module = angular.module("ironBlog", ['ngRoute']);
 
     module.service('ParseJSONService', function($http) {
         this.getParsedJSON = function() {
@@ -34,7 +34,6 @@
             return promise;
         }
     });
-
     module.controller("BlogController", function($scope, ParseJSONService) {
         $scope.blogs = [];
         ParseJSONService.getParsedJSON().then(function (data) {
@@ -55,14 +54,35 @@
                 );
             }
         });
-
-        /* The issue with this is that only the first post is changed, rather than whatever post is clicked on. I don't know how to single out an individual post. I'll try to fix this. */
-        $scope.showMore = function(text) {
-            var shortTxt = document.getElementById("postPreview");
-            shortTxt.innerHTML = text; 
-        }
-
     });
+
+    /* Navigation bar routing. */
+    module.config(['$routeProvider', function($routeProvider) {
+    $routeProvider.
+        when('/', {
+            templateUrl: 'pages/blog.html',
+            controller: 'BlogController'
+        }).
+        when('/posts/:blogId', {
+            templateUrl: 'pages/blog-post.html',
+            controller: 'BlogDetailCtrl'
+        }).
+        when('/roster', {
+            templateUrl: 'pages/roster-table.html',
+            controller: 'RosterController'
+        }).
+        when('/contact', {
+            templateUrl: 'pages/contact.html',
+        }).
+        otherwise({
+            redirectTo: '/'
+        });
+    }]);
+
+    /* Makes the index of the clicked blog accessible so that the appropriate post is displayed. */
+    module.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
+        $scope.blog_id = $routeParams.blogId;
+    }]);
 
     module.controller("RosterController", function($scope, ParseJSONService) {
         $scope.names = [];
@@ -86,28 +106,6 @@
         this.setPage = function(selectedPage) {
             this.page = selectedPage;
         }; 
-    });
-
-    // Not completely necessary now but I think this'll help with the clutter later since we're going to be loading a lot on the single index page.
-    module.directive("postPreview", function() { 
-        return {
-            restrict: "E",
-            templateUrl: "post-preview.html"
-        }
-    });
-
-    module.directive("rosterTable", function() { 
-        return {
-            restrict: "E",
-            templateUrl: "roster-table.html"
-        }
-    });
-
-    module.directive("contact", function() {
-        return {
-            restrict: "E",
-            templateUrl: "contact.html"
-        }
     });
 
     module.directive("isoTime", function() {

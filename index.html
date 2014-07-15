@@ -6,33 +6,25 @@
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<link href="style.css" type="text/css" rel="stylesheet" />
 		<script src="scripts/angular.min.js"></script>
+		<script src="scripts/angular-route.js"></script>
 		<script src="scripts/main.js"></script>
 	</head>
 
 	<body>
 		<header class="banner" role="banner"></header>
-		<div id="container" ng-controller="NavigationController as navi">
+		<div id="container" ng-controller="NavigationController">
 			<nav>
 				<ul id="sidebar">
-					<li ng-class="{ active:navi.isPage(1) }"><a href ng-click="navi.setPage(1)">Home</a></li>
-					<li ng-class="{ active:navi.isPage(2) }"><a href ng-click="navi.setPage(2)">Roster</a></li>
-					<li ng-class="{ active:navi.isPage(3) }"><a href ng-click="navi.setPage(3)">Apply</a></li>
-					<li ng-class="{ active:navi.isPage(4) }"><a href ng-click="navi.setPage(4)">Contact us</a></li>
+					<li><a href="#/">Home</a></li>
+					<li><a href="#/roster">Roster</a></li>
+					<li><a href="#/apply">Apply</a></li>
+					<li><a href="#/contact">Contact us</a></li>
 				</ul>
 			</nav>
-			<main class="posts" role="main" ng-controller="BlogController as blogCtrl">
-				
-				<!-- Post feed of blog. -->
-				<post-preview ng-show="navi.isPage(1)"></post-preview>
-				
-				<!-- Roster table. -->
-				<roster-table ng-show="navi.isPage(2)"></roster-table>
-				
-				<!-- Contact page. -->
-				<contact ng-show="navi.isPage(4)"></contact>
-
+			<main ng-controller="BlogController" role="main">
+				<!-- This div changes based on the URL or what the user has clicked. -->
+				<div ng-view class="posts"></div>
 			</main>
-			<hr />
 		</div>
 		<div id="footer"><a href="https://github.com/fsxfreak/iron-panthers-web">Site created by Stanley Kwong and Leon Cheung. Copyright &copy; 2014.</a></div>
 	</body>
