@@ -9,6 +9,12 @@
         this.index  = index;
     }
 
+    var Member = function(name, grade, team) {
+        this.name = name;
+        this.grade= grade;
+        this.team = team;
+    }
+
     //TODO - Do we want to be American or international?
     Blog.prototype.getDatePlain = function() {
         var monthNames = [
@@ -24,37 +30,6 @@
     }
 
     var module = angular.module("ironBlog", ['ngRoute']);
-
-    module.service('ParseJSONService', function($http) {
-        this.getParsedJSON = function() {
-            var promise = $http.get("http://jpdstan.github.io/iron-panthers-web/text-content/blogs.json")
-                .then(function (response) {
-                    return response.data;
-            });
-            return promise;
-        }
-    });
-    module.controller("BlogController", function($scope, ParseJSONService) {
-        $scope.blogs = [];
-        ParseJSONService.getParsedJSON().then(function (data) {
-            var parsedJSON = data;
-
-            for (var i = 0; i < parsedJSON.blogs.length; i++) {
-                var blog = parsedJSON.blogs[i];
-
-                $scope.blogs.push(new Blog(
-                        blog.header
-                      , blog.author
-                      , blog.team
-                      , new Date(blog.date[0], blog.date[1], blog.date[2])
-                      , blog.text
-                      , blog.links
-                      , blog.index
-                    )
-                );
-            }
-        });
-    });
 
     /* Navigation bar routing. */
     module.config(['$routeProvider', function($routeProvider) {
@@ -79,19 +54,53 @@
         });
     }]);
 
+    module.service('ParseJSONService', function($http) {
+        this.getParsedJSON = function() {
+            var promise = $http.get("http://jpdstan.github.io/iron-panthers-web/text-content/blogs.json")
+                .then(function (response) {
+                    return response.data;
+            });
+            return promise;
+        }
+    });
+    module.controller("BlogController", function($scope, ParseJSONService) {
+        $scope.blogs = [];
+        ParseJSONService.getParsedJSON().then(function (data) {
+            var parsedJSON = data;
+
+            for (var i = 0; i < parsedJSON.blogs.length; i++) {
+                var blog = parsedJSON.blogs[i];
+                $scope.blogs.push(new Blog(
+                        blog.header
+                      , blog.author
+                      , blog.team
+                      , new Date(blog.date[0], blog.date[1], blog.date[2])
+                      , blog.text
+                      , blog.links
+                      , blog.index
+                    )
+                );
+            }
+        });
+    });
+
     /* Makes the index of the clicked blog accessible so that the appropriate post is displayed. */
     module.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
         $scope.blog_id = $routeParams.blogId;
     }]);
 
     module.controller("RosterController", function($scope, ParseJSONService) {
-        $scope.names = [];
+        $scope.members = [];
          ParseJSONService.getParsedJSON().then(function (data) {
             var parsedJSON = data;
 
-            for (var i = 0; i < parsedJSON.names.length; i++) {
-                var name = parsedJSON.names[i];
-                $scope.names.push(name);
+            for (var i = 0; i < parsedJSON.members.length; i++) {
+                var member = parsedJSON.members[i];
+                $scope.members.push(new Member(
+                      member.name
+                    , member.grade
+                    , member.team)
+                );
             }
         });
     });
@@ -117,3 +126,4 @@
         }
     });
 })();
+
