@@ -1,12 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+/* Global */
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    display: block;
+    /*display: block;*/
 }
 title {
     display: none;
+}
+body {
+    overflow: scroll;
 }
 
 /* Header image. */
@@ -16,14 +20,20 @@ title {
     background-position: top center;
     height: 200px;
     margin: -8px -8px 0 -8px;
-    /* Not sure how to make this more reponsive. When the screen resizes, the banner gets too tiny. I want
-    to set a minimum height, but it doesn't work. */
+    padding: 15px 0;
+    text-align: center;
 }
-.banner-header {
-    position: absolute;
-    top: 8%;
-    left: 42%;
+.banner img {
+    width: 130px;
+    height: 100px;
+}
+.banner h1 {
     color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+.banner a {
+    text-decoration: none;
 }
 
 /* Encompasses all elements under the header. */
@@ -62,20 +72,14 @@ title {
         transition-timing-function: initial;
         transition-delay: initial;
 }
-#sidebar li:hover {
-    background-color: rgb(255, 235, 132);
-}
-#sidebar li:active {
-    background-color: rgb(255, 235, 132);
-}
 #sidebar a {
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 3.25%;
+    padding-bottom: 3.25%;
     text-decoration: none;
     color: rgb(155, 155, 155);
 }
-
-#sidebar a:hover {
+#sidebar a:hover, #sidebar li:hover, .highlight {
+    background-color: rgb(255, 235, 132);
     color: rgb(0, 0, 0);
 }
 
@@ -105,7 +109,7 @@ time {
     width: 700px;
 }
 #postPreview {
-
+    margin-bottom: -2.5px;
 }
 
 /* Roster. */
@@ -128,13 +132,20 @@ time {
     display: table;
 }
 
+#testTable {
+    border:1px solid black;
+    border-collapse:collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
 /* Contact page/form. */
 #form {
-    text-align: center;
     font-size: 18px;
     width: 100%;
 }
 #form #box {
+    display: block;
     width: 70%;
     padding: 10px;
     font-size: 14px;

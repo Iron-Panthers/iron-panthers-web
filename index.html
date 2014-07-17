@@ -8,17 +8,24 @@
 		<script src="scripts/angular.min.js"></script>
 		<script src="scripts/angular-route.js"></script>
 		<script src="scripts/main.js"></script>
+		<script src="scripts/jquery-2.1.1.min.js"></script>
+		<script src="scripts/animations.js"></script>
 	</head>
 
 	<body>
-		<header class="banner" role="banner"></header>
+		<header class="banner" role="banner">
+			<a href="#/">
+				<img src="imgs/panther.svg" />
+				<h1>Burlingame Robotics</h1>
+			</a>
+		</header>
 		<div id="container" ng-controller="NavigationController">
 			<nav>
 				<ul id="sidebar">
-					<li><a href="#/">Home</a></li>
-					<li><a href="#/roster">Roster</a></li>
-					<li><a href="#/apply">Apply</a></li>
-					<li><a href="#/contact">Contact us</a></li>
+					<a href="#/"><li>Home</li></a>
+					<a href="#/roster"><li>Roster</li></a>
+					<a href="#/apply"><li>Apply</li></a>
+					<a href="#/contact"><li>Contact us</li></a>
 				</ul>
 			</nav>
 			<main ng-controller="BlogController" role="main">
