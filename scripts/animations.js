@@ -5,3 +5,16 @@ $(document).ready(function () {
         $(this).addClass('highlight');
     });
 });
+
+window.onscroll = scrollNav;
+
+function scrollNav() {
+    var header = document.getElementById("sidebar");
+    if (window.pageYOffset > 200) {
+        header.style.position = "absolute";
+        header.style.top = (pageYOffset - 200) + "px";
+    } else {
+        header.style.position = "";
+        header.style.top = "";
+    }
+}

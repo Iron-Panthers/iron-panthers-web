@@ -14,7 +14,7 @@ body {
 }
 
 /* Header image. */
-.banner {
+#banner {
     background-color: #FF0D0D;
     background-size: 100%;
     background-position: top center;
@@ -23,27 +23,29 @@ body {
     padding: 15px 0;
     text-align: center;
 }
-.banner img {
+#banner img {
     width: 130px;
     height: 100px;
 }
-.banner h1 {
+#banner h1 {
     color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
 }
-.banner a {
+#banner a {
     text-decoration: none;
 }
 
 /* Encompasses all elements under the header. */
 #container {
     margin: 10px auto;
-    width: 900px;
+    width: 950px;
     overflow: auto;
+    position: relative;
 }
 
 /* Navigation sidebar. */
+
 #sidebar {
     float: left;
     margin: 0 auto;
@@ -85,10 +87,12 @@ body {
 
 /* News feed. */
 .posts {
-    float: left;
+    position: relative;
+    float: right;
     margin-left: 2%;
     width: 77%;
-    height: 80%;
+    height: 100%;
+    overflow: hidden;
 }
 time {
     margin-top: 10px;
