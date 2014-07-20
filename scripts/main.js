@@ -5,7 +5,7 @@
         this.team   = team;
         this.date   = date; //should be a Date object, for different Date formats
         this.text   = text;
-        this.links  = imgLinks
+        this.links  = imgLinks;
         this.index  = index;
     }
 
@@ -103,18 +103,6 @@
                 );
             }
         });
-    });
-
-    module.controller("NavigationController", function() {
-        this.page = 1;
-
-        this.isPage = function(checkPage) {
-            return this.page === checkPage;
-        };
-
-        this.setPage = function(selectedPage) {
-            this.page = selectedPage;
-        }; 
     });
 
     module.directive("isoTime", function() {
