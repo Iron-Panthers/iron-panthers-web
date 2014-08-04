@@ -62,6 +62,7 @@
             return promise;
         }
     });
+    
     module.controller("BlogController", function($scope, ParseJSONService) {
         $scope.blogs = [];
         $scope.members = [];
