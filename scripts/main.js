@@ -35,8 +35,7 @@
     module.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
         when('/', {
-            templateUrl: 'pages/blog.html',
-            controller: 'BlogController'
+            templateUrl: 'pages/blog.html'
         }).
         when('/posts/:blogId', {
             templateUrl: 'pages/blog-post.html',
@@ -44,7 +43,7 @@
         }).
         when('/roster', {
             templateUrl: 'pages/roster-table.html',
-            controller: 'RosterController'
+            controller: 'BlogController'
         }).
         when('/contact', {
             templateUrl: 'pages/contact.html',
@@ -65,6 +64,7 @@
     });
     module.controller("BlogController", function($scope, ParseJSONService) {
         $scope.blogs = [];
+        $scope.members = [];
         ParseJSONService.getParsedJSON().then(function (data) {
             var parsedJSON = data;
 
@@ -81,19 +81,6 @@
                     )
                 );
             }
-        });
-    });
-
-    /* Makes the index of the clicked blog accessible so that the appropriate post is displayed. */
-    module.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
-        $scope.blog_id = $routeParams.blogId;
-    }]);
-
-    module.controller("RosterController", function($scope, ParseJSONService) {
-        $scope.members = [];
-         ParseJSONService.getParsedJSON().then(function (data) {
-            var parsedJSON = data;
-
             for (var i = 0; i < parsedJSON.members.length; i++) {
                 var member = parsedJSON.members[i];
                 $scope.members.push(new Member(
@@ -104,6 +91,12 @@
             }
         });
     });
+
+    /* Makes the index of the clicked blog accessible so that the appropriate post is displayed. */
+    module.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
+        $scope.blog_id = $routeParams.blogId;
+    }]);
+
 
     module.directive("isoTime", function() {
         return {
