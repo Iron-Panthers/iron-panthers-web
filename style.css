@@ -39,10 +39,10 @@ body {
 
 /* Encompasses all elements under the header. */
 #container {
-    margin: 10px auto;
-    width: 950px;
-    overflow: auto;
     position: relative;
+    margin: 12px auto;
+    width: 800px;
+    overflow: auto;
 }
 
 /* Navigation sidebar. */
@@ -62,7 +62,7 @@ body {
 
 nav {
     margin: 0px auto;
-    width: 950px;
+    width: 800px;
 }
 
 nav ul {
@@ -93,18 +93,13 @@ nav a:hover, nav li:hover, .highlight {
 }
 
 /* News feed. */
-.posts {
-    position: relative;
-    float: right;
-    margin-left: 2%;
-    width: 77%;
-    height: 100%;
-    overflow: hidden;
-}
 time {
     margin-top: 10px;
     display: inline-block;
     color: #9EABB3;
+}
+.postEntry {
+    margin-bottom: 15px;
 }
 .postEntry h1 {
     margin: 0 auto;
@@ -114,9 +109,10 @@ time {
     font-size: 14px;
 }
 .postEntry img {
+    display: block;
     margin: 0 auto;
     margin-top: 8px;
-    height: 450px;
+    height: 400px;
     width: 700px;
 }
 #postPreview {
