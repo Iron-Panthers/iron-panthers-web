@@ -41,7 +41,7 @@ body {
 #container {
     position: relative;
     margin: 12px auto;
-    width: 800px;
+    width: 900px;
     overflow: auto;
 }
 
@@ -93,6 +93,11 @@ nav a:hover, nav li:hover, .highlight {
 }
 
 /* News feed. */
+.posts {
+    width: 75%;
+    float: right;
+    overflow: hidden;
+}
 time {
     margin-top: 10px;
     display: inline-block;
@@ -113,7 +118,7 @@ time {
     margin: 0 auto;
     margin-top: 8px;
     height: 400px;
-    width: 700px;
+    width: auto;
 }
 #postPreview {
     margin-bottom: -2.5px;
