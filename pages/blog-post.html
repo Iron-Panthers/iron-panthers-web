@@ -1,8 +1,6 @@
 <!-- Template for individual blog posts. Every post has its own unique index from which it can be reached. -->
 <article class="postEntry" ng-controller="BlogDetailCtrl">
 	<header>
-		<!-- TODO: Use Date class so we can fill 
-		in both plaintext date and datetime date -->
 		<span><time x-iso-time="{{ blogs[blog_id].date.toISOString() }}">{{ blogs[blog_id].getDatePlain() }}</time></span>
 		<h1>{{ blogs[blog_id].header }}</h1>
 		<h2>—{{ blogs[blog_id].author }}, {{ blogs[blog_id].team }}</h2>

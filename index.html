@@ -28,6 +28,17 @@
 					<a href="#/contact"><li>Contact us</li></a>
 				</ul>
 			</nav>
+		<div id="container" ng-controller="NavigationController">
+			<div id="navBack">
+				<nav>
+					<ul id="navbar">
+						<a href="#/"><li>Home</li></a>
+						<a href="#/roster"><li>Roster</li></a>
+						<a href="#/apply"><li>Apply</li></a>
+						<a href="#/contact"><li>Contact us</li></a>
+					</ul>
+				</nav>
+			</div>
 			<main ng-controller="BlogController" role="main">
 				<!-- This div changes based on the URL or what the user has clicked. -->
 				<div ng-view class="posts"></div>
