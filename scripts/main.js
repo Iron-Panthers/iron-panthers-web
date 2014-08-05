@@ -95,7 +95,7 @@
             }
 
             //pagination
-            $scope.maxBlogs = 4;
+            $scope.maxBlogs = 5;
             $scope.currentPage = 0;
             $scope.numPages = function () {
                 return Math.ceil($scope.blogs.length / $scope.maxBlogs);
