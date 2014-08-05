@@ -9,10 +9,11 @@
         this.index  = index;
     }
 
-    var Member = function(name, grade, team) {
-        this.name = name;
-        this.grade= grade;
-        this.team = team;
+    var Member = function(name, grade, team, portrait) {
+        this.name     = name;
+        this.grade    = grade;
+        this.team     = team;
+        this.portrait = portrait;
     }
 
     //TODO - Do we want to be American or international?
@@ -36,6 +37,7 @@
     $routeProvider.
         when('/', {
             templateUrl: 'pages/blog.html'
+
         }).
         when('/posts/:blogId', {
             templateUrl: 'pages/blog-post.html',
@@ -87,7 +89,8 @@
                 $scope.members.push(new Member(
                       member.name
                     , member.grade
-                    , member.team)
+                    , member.team
+                    , member.portrait)
                 );
             }
         });
