@@ -55,7 +55,7 @@
 
     module.service('ParseJSONService', function($http) {
         this.getParsedJSON = function() {
-            var promise = $http.get("http://jpdstan.github.io/iron-panthers-web/text-content/blogs.json")
+            var promise = $http.get("text-content/blogs.json")
                 .then(function (response) {
                     return response.data;
             });
