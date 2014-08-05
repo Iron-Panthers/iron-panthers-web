@@ -55,13 +55,20 @@
         });
     }]);
 
-    module.service('ParseJSONService', function($http) {
+    module.service('ParseJSONService', function($http, $q) {
         this.getParsedJSON = function() {
-            var promise = $http.get("text-content/blogs.json")
+            var deferred = $q.defer();
+            /*var promise = $http.get("text-content/blogs.json")
                 .then(function (response) {
                     return response.data;
+            });*/
+            $http.get("text-content/blogs.json").success(function (data, status) {
+                deferred.resolve(data);
+            }).error(function(data, status) {
+                deferred.reject(data);
             });
-            return promise;
+            //return promise;
+            return deferred.promise;
         }
     });
     
