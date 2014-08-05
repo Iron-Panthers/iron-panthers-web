@@ -93,5 +93,11 @@
             "team"    : "Bicycling",
             "portait" : []
         }
+      , {
+            "name"    : "Kieran Dickson",
+            "grade"   : "12",
+            "team"    : "Dota/LOL",
+            "portait" : []
+        }
     ]
 }
