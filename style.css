@@ -41,7 +41,7 @@ body {
 #container {
     position: relative;
     margin: 12px auto;
-    width: 900px;
+    width: 1000px;
     overflow: auto;
 }
 
@@ -95,7 +95,7 @@ nav a:hover, nav li:hover, .highlight {
 
 /* News feed. */
 .posts {
-    width: 75%;
+    width: 65%;
     float: right;
     overflow: hidden;
 }
@@ -124,6 +124,22 @@ time {
 #postPreview {
     margin-bottom: -2.5px;
 }
+
+/* Sidebar. */
+#sidebar {
+    float: left;
+    display: block;
+    position: relative;
+    width: 30%;
+    height: auto;
+    overflow: hidden;
+}
+#sidebar iframe {
+    margin: 10px 10px 10px 0;
+}
+#sidebar ul {
+    list-style: none;
+} 
 
 /* Roster. */
 #rosterTable {
