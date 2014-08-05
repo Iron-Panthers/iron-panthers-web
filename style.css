@@ -15,16 +15,18 @@ body {
 
 /* Header image. */
 #banner {
-    background-color: #FF0D0D;
     background-size: 100%;
     background-position: top center;
-    height: 250px;
+    height: 350px;
     margin: -8px -8px 0 -8px;
     padding: 15px 0;
     text-align: center;
+
+    min-height: 350px;
+    width: auto;
 }
-#banner img {
-    margin-top: 70px;
+#logo {
+    margin-top: 150px;
     width: 130px;
     height: 100px;
 }
@@ -57,6 +59,7 @@ body {
     padding: 7px;
     
     background-color: #AA0000;
+    opacity: 0.9;
     z-index: 9999;
 }
 
