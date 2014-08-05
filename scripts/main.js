@@ -80,7 +80,7 @@
                       , new Date(blog.date[0], blog.date[1], blog.date[2])
                       , blog.text
                       , blog.links
-                      , blog.index
+                      , i   //blog index
                     )
                 );
             }
