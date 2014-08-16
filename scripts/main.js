@@ -72,44 +72,46 @@
         }
     });
     
-    module.controller("BlogController", function($scope, ParseJSONService) {
-        $scope.blogs = [];
-        $scope.members = [];
-        ParseJSONService.getParsedJSON().then(function (data) {
-            var parsedJSON = data;
+    module.controller("BlogController"
+        , function($scope, ParseJSONService) {
+            $scope.blogs = [];
+            $scope.members = [];
+            ParseJSONService.getParsedJSON().then(function (data) {
+                var parsedJSON = data;
 
-            for (var i = 0; i < parsedJSON.blogs.length; i++) {
-                var blog = parsedJSON.blogs[i];
-                $scope.blogs.push(new Blog(
-                        blog.header
-                      , blog.author
-                      , blog.team
-                      , new Date(blog.date[0], blog.date[1], blog.date[2])
-                      , blog.text
-                      , blog.links
-                      , i   //blog index
-                    )
-                );
-            }
-            for (var i = 0; i < parsedJSON.members.length; i++) {
-                var member = parsedJSON.members[i];
-                $scope.members.push(new Member(
-                      member.name
-                    , member.grade
-                    , member.team
-                    , member.portrait)
-                );
-            }
+                for (var i = 0; i < parsedJSON.blogs.length; i++) {
+                    var blog = parsedJSON.blogs[i];
+                    $scope.blogs.push(new Blog(
+                            blog.header
+                          , blog.author
+                          , blog.team
+                          , new Date(blog.date[0], blog.date[1], blog.date[2])
+                          , blog.text
+                          , blog.links
+                          , i   //blog index
+                        )
+                    );
+                }
+                for (var i = 0; i < parsedJSON.members.length; i++) {
+                    var member = parsedJSON.members[i];
+                    $scope.members.push(new Member(
+                          member.name
+                        , member.grade
+                        , member.team
+                        , member.portrait)
+                    );
+                }
 
-            //pagination
-            $scope.maxBlogs = 5;
-            $scope.currentPage = 0;
-            $scope.numPages = function () {
-                return Math.ceil($scope.blogs.length / $scope.maxBlogs);
-            }
+                //pagination
+                $scope.maxBlogs = 5;
+                $scope.currentPage = 0;
+                $scope.numPages = function () {
+                    return Math.ceil($scope.blogs.length / $scope.maxBlogs);
+                }
 
-        });
-    });
+            });
+        }
+    );
 
     /* Makes the index of the clicked blog accessible so that the appropriate post is displayed. */
     module.controller("BlogDetailCtrl", ['$scope', '$routeParams',function($scope, $routeParams) {
@@ -124,6 +126,18 @@
                 attrs.$set('timedate', time);
             }
         }
+    });
+
+    //scroll to top when click next/previous buttons
+    module.directive("scrollOnClick", function() {
+        return {
+            restrict: 'A',
+            link: function(scope, $elm) {
+                $elm.on("click", function() {
+                    $("body").animate({scrollTop: $elm.offset().top}, "slow");
+                });
+            }
+        };
     });
 
     //pagination
