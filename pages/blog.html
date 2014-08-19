@@ -5,8 +5,8 @@
 			<h1>{{ blog.header }}</h1>
 			<h2>—{{ blog.author }}, {{ blog.team }}</h2>
 		</header>
-        <img ng-show="blog.links.length" ng-src="{{ blog.links[0] }}" />
-		<p id="postPreview">{{ blog.text | limitTo: 200 }}...</p><a href="#/posts/{{ blog.index }}">Read more</a>
+        <img ng-show="isMostRecent(blog.index)" ng-src="{{ blog.links[0] }}" />
+		<p id="postPreview">{{ blog.paragraphs[0] | limitTo: limitText(blog.index) }}...</p><a href="#/posts/{{ blog.index }}">Read more</a>
 	</article>
 </div>
 <!-- Next/previous buttons -->

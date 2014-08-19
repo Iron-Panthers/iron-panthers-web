@@ -1,12 +1,13 @@
 (function () {
-    var Blog = function(header, author, team, date, text, imgLinks, index) {
+    var Blog = function(header, author, team, date, paragraphs, imgLinks, index, mostRecent) {
         this.header = header;
         this.author = author;
         this.team   = team;
         this.date   = date; //should be a Date object, for different Date formats
-        this.text   = text;
+        this.paragraphs = paragraphs;
         this.links  = imgLinks;
         this.index  = index;
+        this.mostRecent = mostRecent;
     }
 
     var Member = function(name, grade, team, portrait) {
@@ -79,16 +80,17 @@
             ParseJSONService.getParsedJSON().then(function (data) {
                 var parsedJSON = data;
 
-                for (var i = 0; i < parsedJSON.blogs.length; i++) {
+                var j = 0;
+                for (var i = parsedJSON.blogs.length - 1; i >= 0; i--) {
                     var blog = parsedJSON.blogs[i];
                     $scope.blogs.push(new Blog(
                             blog.header
                           , blog.author
                           , blog.team
-                          , new Date(blog.date[0], blog.date[1], blog.date[2])
-                          , blog.text
+                          , new Date(blog.date[0], blog.date[1] - 1, blog.date[2])
+                          , blog.paragraphs
                           , blog.links
-                          , i   //blog index
+                          , j++ //need to fix this logic, cannot permalink to a blog
                         )
                     );
                 }
@@ -109,6 +111,15 @@
                     return Math.ceil($scope.blogs.length / $scope.maxBlogs);
                 }
 
+                $scope.isMostRecent = function (index) {
+                    return index === 0;  //this logic needs to be fixed, as well as in the for loop where Blog is constructed
+                    //the most recent index should be the last index (blogs.length - 1)
+                    //so we can permalink blogs
+                }
+
+                $scope.limitText = function(index) {
+                    return $scope.isMostRecent(index) ? 400 : 200; 
+                }
             });
         }
     );

@@ -5,72 +5,22 @@
             "author": "Stanley Kwong",
             "team"  : "Webmaster",
             "date"  : ["2014", "6", "1"],
-            "text"  : "We appreciate you checking out our website! However, you caught us at a bit of a bad time, because we're remaking the site! It's going to be pretty sweet, and so much better than the last one. So nothing on the website works right now. Sorry!",
-            "links" : ["imgs/seniors.jpg", "imgs/stock-banner.jpg"]
-        }
-      , {
-            "header": "Writing Software is not like Building a Car",
-            "author": "hexatlas",
-            "team"  : "Filco",
-            "date"  : ["2014", "5", "4"],
-            "text"  : "Building software isn't like building other kinds of things. When you create something — a car, a toy, a chair, a painting, or even digital things like a bitmap or a 3d model — you are producing the end result itself. When you create software, though, you're not creating the end result — you're explaining to a computer how to produce any possible end result given any possible combination of inputs.",
+            "paragraphs" : [
+                "We appreciate you checking out our website! However, you caught us at a bit of a bad time, because we're remaking the site! It's going to be pretty sweet, and so much better than the last one. So nothing on the website works right now. Sorry!"
+            ],
             "links" : []
         }
       , {
-            "header": "Ship You a Haskell",
-            "author": "thoughtbot",
-            "team"  : "Pat Brisbin",
-            "date"  : ["2014", "8", "2"],
-            "text"  : "Part of this experiment was to develop in Haskell using as much of our normal process as possible. That meant deploying to Heroku. Because a clean compilation of a Haskell application (especially with libraries like Yesod or Pandoc) can take some time, the 15 minute build limit became an issue.",
-            "links" : ["imgs/seniors.jpg"]
-        }
-      , {
-            "header": "You Might Not Need jQuery",
-            "author": "Anonymouse",
-            "team"  : "Angular",
-            "date"  : ["2014", "6", "21"],
-            "text"  : "jQuery and its cousins are great, and by all means use them if it makes it easier to develop your application. If youre developing a library on the other hand, please take a moment to consider if you actually need jQuery as a dependency. Maybe you can include a few lines of utility code, and forgo the requirement. If youre only targeting more modern browsers, you might not need anything more than what the browser ships with. ",
-            "links" : ["imgs/seniors.jpg"]
-        }
-      , {
-            "header": "Managing Your Dotfiles",
-            "author": "Anish Athalye",
-            "team"  : "C-c C-v",
-            "date"  : ["2014", "8", "3"],
-            "text"  : "Dotfiles are supposed to contain your personal settings – what works for someone else isnt necessarily optimal for you. If certain configurations worked for everybody, those settings would have been built into programs as defaults. Blindly cloning someone elses dotfiles, especially without having an understanding of how everything works, is not the optimal approach.",
-            "links" : ["imgs/frcsv1.jpg"]
-        }
-      , {
-            "header": "I Love Pointers",
-            "author": "Gandhi X",
-            "team"  : "Ahimsa",
-            "date"  : ["2014", "7", "29"],
-            "text"  : "Pointers are commonly used to point at the first element in an array. This is necessary when an array type itself cannot be used, such as when the array has dynamic length or as the parameter of a function. The usual array indexing syntax can be applied to the pointer, so it can largely be treated as though it were an array. Using pointers in this way is ambiguous because nothing about the type actually says it's pointing at an element in an array.",
-            "links" : ["imgs/seniors.jpg"]
-        }
-      , {
-            "header": "I Love Pointers",
-            "author": "Gandhi X",
-            "team"  : "Ahimsa",
-            "date"  : ["2014", "7", "29"],
-            "text"  : "Pointers are commonly used to point at the first element in an array. This is necessary when an array type itself cannot be used, such as when the array has dynamic length or as the parameter of a function. The usual array indexing syntax can be applied to the pointer, so it can largely be treated as though it were an array. Using pointers in this way is ambiguous because nothing about the type actually says it's pointing at an element in an array.",
-            "links" : ["imgs/seniors.jpg"]
-        }
-      , {
-            "header": "I Love Pointers",
-            "author": "Gandhi X",
-            "team"  : "Ahimsa",
-            "date"  : ["2014", "7", "29"],
-            "text"  : "Pointers are commonly used to point at the first element in an array. This is necessary when an array type itself cannot be used, such as when the array has dynamic length or as the parameter of a function. The usual array indexing syntax can be applied to the pointer, so it can largely be treated as though it were an array. Using pointers in this way is ambiguous because nothing about the type actually says it's pointing at an element in an array.",
-            "links" : ["imgs/seniors.jpg"]
-        }
-      , {
-            "header": "I Love Pointers",
-            "author": "Gandhi X",
-            "team"  : "Ahimsa",
-            "date"  : ["2014", "7", "29"],
-            "text"  : "Pointers are commonly used to point at the first element in an array. This is necessary when an array type itself cannot be used, such as when the array has dynamic length or as the parameter of a function. The usual array indexing syntax can be applied to the pointer, so it can largely be treated as though it were an array. Using pointers in this way is ambiguous because nothing about the type actually says it's pointing at an element in an array.",
-            "links" : ["imgs/seniors.jpg"]
+            "header": "Blocks don't matter: points do.",
+            "author": "Cuyler Crandall",
+            "team"  : "Engineering Lead",
+            "date"  : ["2014", "8", "7"],
+            "paragraphs"  : [
+                "Our first season of FTC was rough around the edges but ultimately a challenging and insightful experience for our team. As a rookie team we fell victim to numerous traps in our design and building process, leading us to waste time and resources on designs which ultimately failed or never came to be. In our first robot we went for the obvious method of scoring points: lifting blocks into the baskets, while we dismissed the pull up bar as an impossibility for our new team and only gave the flag turner a brief afterthought. The robot, when \u201Ccomplete,\u201D was little better than a prototype. The drive base was simple but effective, however everything piled haphazardly on top of it was laughably useless. Our block scoring mechanism was made of wood for lack of metal parts, our flag turner was a Mindstorms motor, and our robot was held together by its string suspension system. Our first competition, the FTC qualifier at Saratoga High School, we fell apart. Literally: the robot was in pieces, the competition had been Murphy\u2019s Law at it\u2019s finest.",
+                "After the competition we were in shock, but after a few days we came to and set at work to rebuild a better robot. Over Thanksgiving break we sat in one of our team leads\u2019 living room and decided upon major points: points were our goal as opposed to blocks, we needed more parts to have any hope of being competitive, and that accepting that our first robot had failed was important in us moving on to the next robot. In the weeks following that meeting we crunched and were able to build our second robot, just barely in time for our second qualifier at Valley Christian High School. Our second robot was the antithesis of our first: where the first had been a blind attempt to score block points, our second was a sleek, barebones robot which aimed to score as many points as we could while still allowing us to build it in under a month. Our second robot virtually ignored the baskets and blocks, aiming to score as many peripheral points as possible (50 from hanging, 35 from the flag, 20 for being on the ramp at the end of autonomous, and finally 20\/40 from a blindly dumped autonomous block).",
+                "The robot was an unprecedented success, although kinks in the design held us back in the standings, we obtained the highest block scores in each competition which we competed at. Sadly, we were too little, too late and were unable to qualify for the next level of FTC competition. What we did learn from the two robots was the importance in timing, a robot which could grab all of the \u201Cdifficult\u201D points during the first qualifier would be enough to qualify for the next round, but by building it for our second competition it wasn\u2019t enough to compete with the more complex \u201Cdo-it-all\u201D robots. Next year one of our biggest goals will be to build a robot which is designed to maximize points scored first, and only after we have that robot working will we either build a second robot or improve the first in order to address all elements of the game. Doing so should allow us to qualify for the next level of FTC, and lead to competitive season for our robots and team."
+            ],
+            "links" : ["imgs/ftcrobot0.jpg"]
         }
     ],
     

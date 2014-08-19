@@ -6,5 +6,7 @@
 		<h2>—{{ blogs[blog_id].author }}, {{ blogs[blog_id].team }}</h2>
 	</header>
     <img ng-show="blogs[blog_id].links.length" ng-src="{{ blogs[blog_id].links[0] }}" />
-	<p id="postPreview">{{ blogs[blog_id].text }}</p>
+	<p id="postPreview" ng-repeat="text in blogs[blog_id].paragraphs">
+		{{ text }}
+	</p>
 </article>
