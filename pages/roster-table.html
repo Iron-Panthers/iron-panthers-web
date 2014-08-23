@@ -1,17 +1,76 @@
 <h1>Team Roster</h1>
-<table id="rosterTable" summary="Roster of Team Members">
+<h2>Mentors</h2>
+<table class="rosterTable" summary="Roster of Team Mentors">
+	<thead>
+		<tr>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="mentor in mentors">
+			<td>{{ mentor.getFullName() }}</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Leads</h2>
+<table class="rosterTable" summary="Roster of Team Leads">
 	<thead>
 		<tr>
 			<th>Name</th>
 			<th>Grade</th>
-			<th>Team</th>
+			<th>Title</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="member in members">
-			<td>{{ member.name }}</td>
-			<td>{{ member.grade }}</td>
-			<td>{{ member.team }}</td>
+		<tr ng-repeat="lead in leads">
+			<td>{{ lead.getFullName() }}</td>
+			<td>{{ lead.getGrade() }}</td>
+			<td>{{ lead.getTitle() }}</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Engineers</h2>
+<table class="rosterTable" summary="Roster of Team Engineers">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Grade</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="engineer in engineers">
+			<td>{{ engineer.getFullName() }}</td>
+			<td>{{ engineer.getGrade() }}</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Programmers</h2>
+<table class="rosterTable" summary="Roster of Team Programmers">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Grade</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="programmer in programmers">
+			<td>{{ programmer.getFullName() }}</td>
+			<td>{{ programmer.getGrade() }}</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Business</h2>
+<table class="rosterTable" summary="Roster of Team Business">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Grade</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="busi in business">
+			<td>{{ busi.getFullName() }}</td>
+			<td>{{ busi.getGrade() }}</td>
 		</tr>
 	</tbody>
 </table>

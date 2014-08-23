@@ -9,14 +9,6 @@
         this.index  = index;
     }
 
-    var Member = function(name, grade, team, portrait) {
-        this.name     = name;
-        this.grade    = grade;
-        this.team     = team;
-        this.portrait = portrait;
-    }
-
-    //TODO - Do we want to be American or international?
     Blog.prototype.getDatePlain = function() {
         var monthNames = [
             "January", "February", "March", "April", "May", "June"
@@ -30,6 +22,47 @@
         return month + " " + day + ", " + year;
     }
 
+    //base info everyone has, including mentors. using composition
+    var Participant = function(firstname, lastname, portrait) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.portrait = portrait;
+    }
+    Participant.prototype.getFirstName = function() { return this.firstname; }
+    Participant.prototype.getLastName  = function() { return this.lastname;  }
+    Participant.prototype.getPortrait  = function() { return this.portrait;  }
+    Participant.prototype.getFullName  = function() { 
+        return this.getFirstName() + " " + this.getLastName();
+    }
+
+    //students of the team
+    var Member = function(firstname, lastname, portrait, grade) {
+        this.participant = new Participant(firstname, lastname, portrait);
+        this.grade = grade;
+    }
+    Member.prototype.getFirstName = function() { return this.participant.getFirstName(); }
+    Member.prototype.getLastName  = function() { return this.participant.getLastName();  }
+    Member.prototype.getPortrait  = function() { return this.participant.getPortrait();  }
+    Member.prototype.getGrade     = function() { return this.grade;                      }
+    Member.prototype.getFullName  = function() { return this.participant.getFullName();  }
+
+    //leads of the team
+    var Lead = function(firstname, lastname, portrait, grade, title) {
+        this.member = new Member(firstname, lastname, portrait, grade);
+        this.title = title;
+    }
+    Lead.prototype.getFirstName = function() { return this.member.getFirstName(); }
+    Lead.prototype.getLastName  = function() { return this.member.getLastName();  }
+    Lead.prototype.getPortrait  = function() { return this.member.getPortrait();  }
+    Lead.prototype.getGrade     = function() { return this.member.getGrade();     }
+    Lead.prototype.getTitle     = function() { return this.title;                 }
+    Lead.prototype.getFullName  = function() { return this.member.getFullName();  }
+
+
+    var sortLastName = function (left, right) {
+        return left.getLastName().localeCompare(right.getLastName());
+    }
+    
     var module = angular.module("ironBlog", ['ngRoute', 'ngSanitize']);
 
     /* Navigation bar routing. */
@@ -75,7 +108,12 @@
     module.controller("BlogController"
         , function($scope, ParseJSONService) {
             $scope.blogs = [];
-            $scope.members = [];
+            $scope.mentors = [];
+            $scope.leads = [];
+            $scope.engineers = [];
+            $scope.programmers = [];
+            $scope.business = [];
+
             ParseJSONService.getParsedJSON().then(function (data) {
                 var parsedJSON = data;
 
@@ -93,15 +131,78 @@
                         )
                     );
                 }
-                for (var i = 0; i < parsedJSON.members.length; i++) {
-                    var member = parsedJSON.members[i];
-                    $scope.members.push(new Member(
-                          member.name
-                        , member.grade
-                        , member.team
-                        , member.portrait)
+
+                //roster table
+                var mentors = parsedJSON.members.mentors;
+                for (var i = 0; i < mentors.length; i++) {
+                    var mentor = mentors[i];
+                    $scope.mentors.push(new Participant(
+                            mentor.firstname,
+                            mentor.lastname,
+                            mentor.portrait
+                        )
                     );
                 }
+                $scope.mentors.sort(sortLastName);
+
+                var leads = parsedJSON.members.leads;
+                for (var i = 0; i < leads.length; i++) {
+                    var lead = leads[i];
+                    $scope.leads.push(new Lead(
+                            lead.firstname,
+                            lead.lastname,
+                            lead.portrait,
+                            lead.grade,
+                            lead.title
+                        )
+                    );
+                }
+                $scope.leads.sort(function (left, right) {
+                    if (left.title === right.title)
+                        return sortLastName(left, right);
+
+                    return false;
+                });
+
+                var engineers = parsedJSON.members.engineers;
+                for (var i = 0; i < engineers.length; i++) {
+                    var engineer = engineers[i];
+                    $scope.engineers.push(new Member(
+                            engineer.firstname,
+                            engineer.lastname,
+                            engineer.portrait,
+                            engineer.grade
+                        )
+                    );
+                }
+                $scope.engineers.sort(sortLastName);
+
+                var programmers = parsedJSON.members.programmers;
+                for (var i = 0; i < programmers.length; i++) {
+                    var programmer = programmers[i];
+                    $scope.programmers.push(new Member(
+                            programmer.firstname,
+                            programmer.lastname,
+                            programmer.portrait,
+                            programmer.grade
+                        )
+                    );
+                }
+                $scope.programmers.sort(sortLastName);
+
+                var business = parsedJSON.members.business;
+                console.log(business);
+                for (var i = 0; i < business.length; i++) {
+                    var busi = business[i];
+                    $scope.business.push(new Member(
+                            busi.firstname,
+                            busi.lastname,
+                            busi.portrait,
+                            busi.grade
+                        )
+                    );
+                }
+                $scope.business.sort(sortLastName);
 
                 //pagination
                 $scope.maxBlogs = 5;

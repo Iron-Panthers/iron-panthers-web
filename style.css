@@ -155,20 +155,20 @@ time {
 }
 
 /* Roster. */
-#rosterTable {
+.rosterTable {
     text-align: left;
     width: 480px;
     border-collapse:collapse;
 }
-#rosterTable th, #rosterTable td, #rosterTable table { 
+.rosterTable th, .rosterTable td, .rosterTable table { 
     border: 1px solid #111;
     padding: 10px;
 }
-#rosterTable tr:nth-child(even) {
+.rosterTable tr:nth-child(even) {
     background: #eeeeee;
 }
 
-#rosterTable table {
+.rosterTable table {
     display: table;
 }
 

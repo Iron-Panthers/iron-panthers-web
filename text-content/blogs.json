@@ -25,7 +25,7 @@
       , {
             "header": "Bag and Tag Fundraiser",
             "author": "Christina Wade", 
-            "team"  : "Principal Mentor",
+            "team"  : "Advisor",
             "date"  : ["2014", "8", "20"],
             "paragraphs" : [
                 "On February 20th, the Iron Panthers held their first annual Bag and Tag Fundraiser Dinner. We raised not only over $1000, but also awareness of and support for the team! Wow! Not too shabby for a rookie team! Guests were able to see demonstrations of both the FTC and the FRC robots, as well as watch the Chairman's Award video and Robot Release video as we unveiled the \"Deadliest Catch.\" We also presented a <a href=\"http://prezi.com/jkgenwbyud1w/burlingame-robotics-team/\">Prezi<\/a> detailing our journey thus far.",
@@ -36,30 +36,59 @@
         }
     ],
     
-    "members": [
-        {
-            "name"    : "Leon Cheungbaby",
-            "grade"   : "12",
-            "team"    : "Programming",
-            "portait" : []
-        }
-      , {
-            "name"    : "Maxim Chen",
-            "grade"   : "13",
-            "team"    : "Unavailable",
-            "portait" : []
-        }
-      , {
-            "name"    : "Kyle Cheung",
-            "grade"   : "14",
-            "team"    : "Bicycling",
-            "portait" : []
-        }
-      , {
-            "name"    : "Kieran Dickson",
-            "grade"   : "12",
-            "team"    : "Dota/LOL",
-            "portait" : []
-        }
-    ]
+    "members": {
+        "mentors" : [
+            { "firstname": "Christina", "lastname": "Wade",     "portrait": "" },
+            { "firstname": "Ian",       "lastname": "Hovander", "portrait": "" },
+            { "firstname": "Parker",    "lastname": "Robinson", "portrait": "" }
+        ],
+        "leads": [
+            { "firstname": "Sami",      "lastname": "Solow",    "portrait": ""
+                , "grade": 12, "title": "Team Captain"     },
+            { "firstname": "Cameron",   "lastname": "Chen",     "portrait": ""
+                , "grade": 12, "title": "Team Captain"     },
+            { "firstname": "Reuben",    "lastname": "Grossman", "portrait": ""
+                , "grade": 11, "title": "Engineering Lead" },
+            { "firstname": "Cuyler",    "lastname": "Crandall", "portrait": ""
+                , "grade": 11, "title": "Engineering Lead" },
+            { "firstname": "Leon",      "lastname": "Cheung",   "portrait": ""
+                , "grade": 12, "title": "Programming Lead" },
+            { "firstname": "Sam",       "lastname": "Shih",     "portrait": ""
+                , "grade": 12, "title": "Programming Lead" },
+            { "firstname": "Morgan",    "lastname": "Ome",      "portrait": ""
+                , "grade": 12, "title": "Business Lead"    },
+            { "firstname": "Gracie",    "lastname": "Kober",    "portrait": ""
+                , "grade": 10, "title": "Business Lead"    },
+            { "firstname": "Esme",      "lastname": "Brachmann","portrait": ""
+                , "grade": 12, "title": "Treasurer"        },
+            { "firstname": "Meredith",  "lastname": "Nash",     "portrait": ""
+                , "grade": 10, "title": "Treasurer"        }
+        ],
+        "engineers": [
+            { "firstname": "Connor",    "lastname": "Aitken",   "portrait": "", "grade": 12 },
+            { "firstname": "Alton",     "lastname": "Shu",      "portrait": "", "grade": 11 },
+            { "firstname": "Thomas",    "lastname": "Masterson","portrait": "", "grade": 11 },
+            { "firstname": "Travis",    "lastname": "Ng",       "portrait": "", "grade": 12 },
+            { "firstname": "Isabela",   "lastname": "Acenas",   "portrait": "", "grade": 10 },
+            { "firstname": "Michelle",  "lastname": "Mak",      "portrait": "", "grade": 12 }
+        ],
+        "programmers": [
+            { "firstname": "Peter",    "lastname": "Anders",    "portrait": "", "grade": 10 },
+            { "firstname": "Fiona",    "lastname": "Zhao",      "portrait": "", "grade": 10 },
+            { "firstname": "Peter",    "lastname": "Skidmore",  "portrait": "", "grade": 10 },
+            { "firstname": "Maggie",   "lastname": "Chang",     "portrait": "", "grade": 10 },
+            { "firstname": "Riley",    "lastname": "Woo",       "portrait": "", "grade": 12 },
+            { "firstname": "Andrew",   "lastname": "Guan",      "portrait": "", "grade": 12 },
+            { "firstname": "Reave",    "lastname": "Hosman",    "portrait": "", "grade": 12 },
+            { "firstname": "Hyun June","lastname": "Gill",      "portrait": "", "grade": 12 },
+            { "firstname": "Ethan",    "lastname": "Hsieh",     "portrait": "", "grade": 12 },
+            { "firstname": "Jessica",  "lastname": "Cherny",    "portrait": "", "grade": 12 }
+        ],
+        "business": [
+            { "firstname": "David",    "lastname": "Zhou",      "portrait": "", "grade": 11 },
+            { "firstname": "Valerie",  "lastname": "Hon",       "portrait": "", "grade": 10 },
+            { "firstname": "Dara",     "lastname": "Phung",     "portrait": "", "grade": 10 },
+            { "firstname": "Sonia",    "lastname": "Varah",     "portrait": "", "grade": 10 }
+        ]
+    }
 }
