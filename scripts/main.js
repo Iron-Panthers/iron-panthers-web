@@ -1,13 +1,13 @@
 (function () {
-    var Blog = function(header, author, team, date, paragraphs, imgLinks, index, mostRecent) {
+    var Blog = function(header, author, team, date, paragraphs, imgLinks, links, index) {
         this.header = header;
         this.author = author;
         this.team   = team;
         this.date   = date; //should be a Date object, for different Date formats
         this.paragraphs = paragraphs;
-        this.links  = imgLinks;
+        this.images  = imgLinks;
+        this.links  = links;
         this.index  = index;
-        this.mostRecent = mostRecent;
     }
 
     var Member = function(name, grade, team, portrait) {
@@ -89,6 +89,7 @@
                           , blog.team
                           , new Date(blog.date[0], blog.date[1] - 1, blog.date[2])
                           , blog.paragraphs
+                          , blog.images
                           , blog.links
                           , j++ //need to fix this logic, cannot permalink to a blog
                         )
