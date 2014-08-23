@@ -138,18 +138,6 @@
         }
     });
 
-    //scroll to top when click next/previous buttons
-    module.directive("scrollOnClick", function() {
-        return {
-            restrict: 'A',
-            link: function(scope, $elm) {
-                $elm.on("click", function() {
-                    $("body").animate({scrollTop: $elm.offset().top}, "slow");
-                });
-            }
-        };
-    });
-
     //pagination
     module.filter("startFrom", function () {
         return function (input, start) {
@@ -157,6 +145,23 @@
             return input.slice(start);
         }
     });
+
+    module.run(["$rootScope", "$window", "$location", "$anchorScroll"
+        , function ($rootScope, $window, $location, $anchorScroll) {
+            $rootScope.$on("$routeChangeStart"
+                , function (evt, absNewUrl, absOldUrl) {
+                    var expandPost = "/posts/";
+                    if ($location.path().match(expandPost) !== null) {
+                        /*$location.hash("topOfBlog");
+                        $anchorScroll();*/
+                        $window.scrollTo(0, 301);   //ugly
+                    } else {
+                        $window.scrollTo(0, 0);
+                    }
+                }
+            );
+        }
+    ]);
 })();
 
 function randomizeImage() {
