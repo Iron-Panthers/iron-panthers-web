@@ -1,12 +1,11 @@
 (function () {
-    var Blog = function(header, author, team, date, paragraphs, imgLinks, links, index) {
+    var Blog = function(header, author, team, date, paragraphs, imgLinks, index) {
         this.header = header;
         this.author = author;
         this.team   = team;
         this.date   = date; //should be a Date object, for different Date formats
         this.paragraphs = paragraphs;
         this.images  = imgLinks;
-        this.links  = links;
         this.index  = index;
     }
 
@@ -31,7 +30,7 @@
         return month + " " + day + ", " + year;
     }
 
-    var module = angular.module("ironBlog", ['ngRoute']);
+    var module = angular.module("ironBlog", ['ngRoute', 'ngSanitize']);
 
     /* Navigation bar routing. */
     module.config(['$routeProvider', function($routeProvider) {
@@ -90,7 +89,6 @@
                           , new Date(blog.date[0], blog.date[1] - 1, blog.date[2])
                           , blog.paragraphs
                           , blog.images
-                          , blog.links
                           , j++ //need to fix this logic, cannot permalink to a blog
                         )
                     );
