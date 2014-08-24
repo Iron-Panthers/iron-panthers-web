@@ -20,7 +20,7 @@
                 "After the competition we were in shock, but after a few days we came to and set at work to rebuild a better robot. Over Thanksgiving break we sat in one of our team leads\u2019 living room and decided upon major points: points were our goal as opposed to blocks, we needed more parts to have any hope of being competitive, and that accepting that our first robot had failed was important in us moving on to the next robot. In the weeks following that meeting we crunched and were able to build our second robot, just barely in time for our second qualifier at Valley Christian High School. Our second robot was the antithesis of our first: where the first had been a blind attempt to score block points, our second was a sleek, barebones robot which aimed to score as many points as we could while still allowing us to build it in under a month. Our second robot virtually ignored the baskets and blocks, aiming to score as many peripheral points as possible (50 from hanging, 35 from the flag, 20 for being on the ramp at the end of autonomous, and finally 20\/40 from a blindly dumped autonomous block).",
                 "The robot was an unprecedented success, although kinks in the design held us back in the standings, we obtained the highest block scores in each competition which we competed at. Sadly, we were too little, too late and were unable to qualify for the next level of FTC competition. What we did learn from the two robots was the importance in timing, a robot which could grab all of the \u201Cdifficult\u201D points during the first qualifier would be enough to qualify for the next round, but by building it for our second competition it wasn\u2019t enough to compete with the more complex \u201Cdo-it-all\u201D robots. Next year one of our biggest goals will be to build a robot which is designed to maximize points scored first, and only after we have that robot working will we either build a second robot or improve the first in order to address all elements of the game. Doing so should allow us to qualify for the next level of FTC, and lead to competitive season for our robots and team."
             ],
-            "images": ["imgs/ftcrobot0.jpg"]
+            "images": ["imgs/ftcrobot1sharpened.jpg"]
         }
       , {
             "header": "Bag and Tag Fundraiser",
@@ -33,6 +33,20 @@
                 "After a dinner provided by Iron Panther chefs and local businesses such as Crepevine, some guests were able to drive the FTC robot, raising the flag and hanging from the pull-up bar. Aside from Iron Panthers families and BHS teachers, major community members also attended, including Burlingame mayor Michael Brownrigg."
             ],
             "images": ["imgs/bagandtag0.jpg"]
+        }
+      , {
+            "header": "Holiday Fundraiser",
+            "author": "Christina Wade",
+            "team"  : "Advisor",
+            "date"  : ["2014", "8", "20"],
+            "paragraphs" : [
+                "Talk about spirit! The Iron Panthers brought the FTC robot to Burlingame's annual Tree Lighting Ceremony in order to show off the newly improved \"Rubicorn\" to the wider community.",
+                "<img src=\"imgs/treelighting1.jpg\"><\/img>",
+                "Kids and adults gathered around the table to gander at the mechanical beast that stood in front of them. Local politicians, choir groups, merchants, and vendors gather during the Tree Lighting Ceremony to celebrate the holidays and support the community.  We persevered, despite the rain, and received many compliments from community members.",
+                "<img src=\"imgs/treelighting2.jpg\"><\/img>"
+                
+            ],
+            "images": ["imgs/treelighting0.jpg"]
         }
     ],
     
