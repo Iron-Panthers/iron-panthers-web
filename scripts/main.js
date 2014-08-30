@@ -66,27 +66,30 @@
     var module = angular.module("ironBlog", ['ngRoute', 'ngSanitize']);
 
     /* Navigation bar routing. */
-    module.config(['$routeProvider', function($routeProvider) {
-    $routeProvider.
-        when('/', {
-            templateUrl: 'pages/blog.html'
+    module.config(['$routeProvider', '$locationProvider',
+        function($routeProvider, $locationProvider) {
+            $locationProvider.hashPrefix('!');
+            $routeProvider.
+                when('/', {
+                    templateUrl: 'pages/blog.html'
 
-        }).
-        when('/posts/:blogId', {
-            templateUrl: 'pages/blog-post.html',
-            controller: 'BlogDetailCtrl'
-        }).
-        when('/roster', {
-            templateUrl: 'pages/roster-table.html',
-            controller: 'BlogController'
-        }).
-        when('/contact', {
-            templateUrl: 'pages/contact.html',
-        }).
-        otherwise({
-            redirectTo: '/'
-        });
-    }]);
+                }).
+                when('/posts/:blogId', {
+                    templateUrl: 'pages/blog-post.html',
+                    controller: 'BlogDetailCtrl'
+                }).
+                when('/roster', {
+                    templateUrl: 'pages/roster-table.html',
+                    controller: 'BlogController'
+                }).
+                when('/contact', {
+                    templateUrl: 'pages/contact.html',
+                }).
+                otherwise({
+                    redirectTo: '/'
+                });
+        }
+    ]);
 
     module.service('ParseJSONService', function($http, $q) {
         this.getParsedJSON = function() {
@@ -191,7 +194,6 @@
                 $scope.programmers.sort(sortLastName);
 
                 var business = parsedJSON.members.business;
-                console.log(business);
                 for (var i = 0; i < business.length; i++) {
                     var busi = business[i];
                     $scope.business.push(new Member(
