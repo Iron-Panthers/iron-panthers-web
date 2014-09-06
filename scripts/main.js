@@ -3,7 +3,7 @@
         this.header = header;
         this.author = author;
         this.team   = team;
-        this.date   = date; //should be a Date object, for different Date formats
+        this.date   = date; 
         this.paragraphs = paragraphs;
         this.images  = imgLinks;
         this.index  = index;
@@ -94,16 +94,13 @@
     module.service('ParseJSONService', function($http, $q) {
         this.getParsedJSON = function() {
             var deferred = $q.defer();
-            /*var promise = $http.get("text-content/blogs.json")
-                .then(function (response) {
-                    return response.data;
-            });*/
+
             $http.get("text-content/blogs.json").success(function (data, status) {
                 deferred.resolve(data);
             }).error(function(data, status) {
                 deferred.reject(data);
             });
-            //return promise;
+
             return deferred.promise;
         }
     });
