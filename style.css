@@ -11,6 +11,7 @@ title {
 }
 body {
     overflow: scroll;
+    color: #000;
 }
 
 /* Header image. */
@@ -154,29 +155,46 @@ time {
     margin: 0 10px;
 }
 
-/* Roster. */
 .rosterTable {
+    font-size: 14px;
     text-align: left;
     width: 480px;
-    border-collapse:collapse;
-}
-.rosterTable th, .rosterTable td, .rosterTable table { 
-    border: 1px solid #111;
-    padding: 10px;
-}
-.rosterTable tr:nth-child(even) {
-    background: #eeeeee;
+    border-collapse: collapse;
+    color: #5c5c5c;
+    margin: 20px 0px;
 }
 
-.rosterTable table {
-    display: table;
+.rosterTable th {
+    font-size: 18px;
+    border-bottom: 2px solid;
+    border-color: #aa6363;
+    padding: 0px 5px 2px 5px;
+    color: #000000;
 }
 
-#testTable {
-    border:1px solid black;
-    text-align: left;
-    font-size: 14px;
+.rosterTable td {
+    padding: 5px 5px;
+    border-bottom: 1px solid;
+    border-color: #aa6363;
 }
+
+.rosterTable tbody tr:hover, tbody tr.alt:hover {
+    color: #000000;
+    background-color: #FFDDDD;
+}
+
+th.name {
+    color: #a20000;
+}
+th.grade {
+    text-align: right;
+}
+td.grade {
+    text-align: right;
+}
+
+
+
 
 /* Contact page/form. */
 #form {

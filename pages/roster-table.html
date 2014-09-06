@@ -1,9 +1,8 @@
 <h1>Team Roster</h1>
-<h2>Mentors</h2>
 <table class="rosterTable" summary="Roster of Team Mentors">
 	<thead>
 		<tr>
-			<th>Name</th>
+			<th class="name">Mentor</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12,65 +11,61 @@
 		</tr>
 	</tbody>
 </table>
-<h2>Leads</h2>
 <table class="rosterTable" summary="Roster of Team Leads">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Grade</th>
-			<th>Title</th>
+			<th class="name" scope="col">Lead</th>
+			<th scope="col">Title</th>
+			<th class="grade"scope="col">Grade</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr ng-repeat="lead in leads">
-			<td>{{ lead.getFullName() }}</td>
-			<td>{{ lead.getGrade() }}</td>
+			<td class="name">{{ lead.getFullName() }}</td>
 			<td>{{ lead.getTitle() }}</td>
+			<td class="grade">{{ lead.getGrade() }}</td>
 		</tr>
 	</tbody>
 </table>
-<h2>Engineers</h2>
 <table class="rosterTable" summary="Roster of Team Engineers">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Grade</th>
+			<th class="name" scope="col">Engineer</th>
+			<th class="grade"scope="col">Grade</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr ng-repeat="engineer in engineers">
-			<td>{{ engineer.getFullName() }}</td>
-			<td>{{ engineer.getGrade() }}</td>
+			<td class="name">{{ engineer.getFullName() }}</td>
+			<td class="grade">{{ engineer.getGrade() }}</td>
 		</tr>
 	</tbody>
 </table>
-<h2>Programmers</h2>
 <table class="rosterTable" summary="Roster of Team Programmers">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Grade</th>
+			<th class="name" scope="col">Programmer</th>
+			<th class="grade"scope="col">Grade</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr ng-repeat="programmer in programmers">
-			<td>{{ programmer.getFullName() }}</td>
-			<td>{{ programmer.getGrade() }}</td>
+			<td class="name">{{ programmer.getFullName() }}</td>
+			<td class="grade">{{ programmer.getGrade() }}</td>
 		</tr>
 	</tbody>
 </table>
-<h2>Business</h2>
 <table class="rosterTable" summary="Roster of Team Business">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Grade</th>
+			<th class="name" scope="col">Business</th>
+			<th class="grade"scope="col">Grade</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr ng-repeat="busi in business">
-			<td>{{ busi.getFullName() }}</td>
-			<td>{{ busi.getGrade() }}</td>
+			<td class="name">{{ busi.getFullName() }}</td>
+			<td class="grade">{{ busi.getGrade() }}</td>
 		</tr>
 	</tbody>
 </table>

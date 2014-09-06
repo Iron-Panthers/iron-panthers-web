@@ -103,8 +103,7 @@
             { "firstname": "Priya",     "lastname": "Koliwad",  "portrait": "", "grade": 9  },
             { "firstname": "Nico",      "lastname": "Mauri",    "portrait": "", "grade": 9  },
             { "firstname": "William",   "lastname": "Kjærulff-Jørgensen","portrait": "", "grade": 9  },
-            { "firstname": "Jared",    "lastname": "Birmingham","portrait": "", "grade": 9  },
-
+            { "firstname": "Jared",    "lastname": "Birmingham","portrait": "", "grade": 9  }
         ],
         "programmers": [
             { "firstname": "Fiona",    "lastname": "Zhao",      "portrait": "", "grade": 10 },
