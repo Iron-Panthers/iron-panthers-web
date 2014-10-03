@@ -265,7 +265,7 @@
 })();
 
 function randomizeImage() {
-    var totalBgImgs = 12;
+    var totalBgImgs = 15;
     var img = Math.floor(Math.random() * totalBgImgs);
     var header = document.body.children[0];
     var path = "imgs/banners/banner" + img + ".jpg";
