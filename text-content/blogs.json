@@ -5,32 +5,149 @@
             "author": "Stanley Kwong",
             "team"  : "Webmaster",
             "date"  : ["2014", "6", "1"],
-            "text"  : "We appreciate you checking out our website! However, you caught us at a bit of a bad time, because we're remaking the site! It's going to be pretty sweet, and so much better than the last one. So nothing on the website works right now. Sorry!",
-            "links": ["imgs/seniors.jpg", "imgs/stock-banner.jpg"] 
+            "paragraphs" : [
+                "We appreciate you checking out our website! However, you caught us at a bit of a bad time, because we're remaking the site! It's going to be pretty sweet, and so much better than the last one. So nothing on the website works right now. Sorry!"
+            ],
+            "images": []
         }
       , {
-            "header": "Use Protection with Pointers",
-            "author": "Weyman Kwong",
-            "team"  : "Ducky",
-            "date"  : ["2014", "7", "29"],
-            "text"  : "It's important to choose types that cannot be used in ways for which they weren't intended. This ensures that problems are detected earlier and that your interfaces are clean and expressive. I often think about what types tell me. Just by looking at the type of a variable (perhaps a function parameter), what can I determine about the values that it should take? Raw pointers are far too ambiguous. It is possible to use them in ways much broader than their intended use, often with terrible consequences. If you see a function with a pointer parameter, it is difficult to know what you should be passing to the function without reading its documentation. Even then, you'd better hope the documentation was correct and you are passing the correct things. The more specific we can be with our types the better, as it ensures that our code is safe, trustworthy, and easily understood. As with many things in C++, we can often achieve this with little to no run-time cost.",
-            "links": ["imgs/seniors.jpg"]
+            "header": "Holiday Fundraiser",
+            "author": "Christina Wade",
+            "team"  : "Advisor",
+            "date"  : ["2013", "12", "6"],
+            "paragraphs" : [
+                "Talk about spirit! The Iron Panthers brought the FTC robot to Burlingame's annual Tree Lighting Ceremony in order to show off the newly improved \"Rubicorn\" to the wider community.",
+                "<img src=\"imgs/treelighting1.jpg\"><\/img>",
+                "Kids and adults gathered around the table to gander at the mechanical beast that stood in front of them. Local politicians, choir groups, merchants, and vendors gather during the Tree Lighting Ceremony to celebrate the holidays and support the community.  We persevered, despite the rain, and received many compliments from community members.",
+                "<img src=\"imgs/treelighting2.jpg\"><\/img>"
+                
+            ],
+            "images": ["imgs/treelighting0.jpg"]
         }
       , {
-            "header": "I Love Pointers",
-            "author": "Gandhi X",
-            "team"  : "Ahimsa",
-            "date"  : ["2014", "7", "29"],
-            "text"  : "Pointers are commonly used to point at the first element in an array. This is necessary when an array type itself cannot be used, such as when the array has dynamic length or as the parameter of a function. The usual array indexing syntax can be applied to the pointer, so it can largely be treated as though it were an array. Using pointers in this way is ambiguous because nothing about the type actually says it's pointing at an element in an array.",
-            "links": ["imgs/seniors.jpg"]
+            "header": "Bag and Tag Fundraiser",
+            "author": "Christina Wade", 
+            "team"  : "Advisor",
+            "date"  : ["2014", "2", "21"],
+            "paragraphs" : [
+                "On February 20th, the Iron Panthers held their first annual Bag and Tag Fundraiser Dinner. We raised not only over $1000, but also awareness of and support for the team! Wow! Not too shabby for a rookie team! Guests were able to see demonstrations of both the FTC and the FRC robots, as well as watch the Chairman's Award video and Robot Release video as we unveiled the \"Deadliest Catch.\" We also presented a <a href=\"http://prezi.com/jkgenwbyud1w/burlingame-robotics-team/\">Prezi<\/a> detailing our journey thus far.",
+                "<img src=\"imgs/bagandtag1.jpg\" alt=\"Dinner presentations\"><\/img>",
+                "After a dinner provided by Iron Panther chefs and local businesses such as Crepevine, some guests were able to drive the FTC robot, raising the flag and hanging from the pull-up bar. Aside from Iron Panthers families and BHS teachers, major community members also attended, including Burlingame mayor Michael Brownrigg."
+            ],
+            "images": ["imgs/bagandtag0.jpg"]
+        }
+      , {
+            "header": "Blocks don't matter: points do.",
+            "author": "Cuyler Crandall",
+            "team"  : "Engineering Lead",
+            "date"  : ["2014", "8", "7"],
+            "paragraphs"  : [
+                "Our first season of FTC was rough around the edges but ultimately a challenging and insightful experience for our team. As a rookie team we fell victim to numerous traps in our design and building process, leading us to waste time and resources on designs which ultimately failed or never came to be. In our first robot we went for the obvious method of scoring points: lifting blocks into the baskets, while we dismissed the pull up bar as an impossibility for our new team and only gave the flag turner a brief afterthought. The robot, when \u201Ccomplete,\u201D was little better than a prototype. The drive base was simple but effective, however everything piled haphazardly on top of it was laughably useless. Our block scoring mechanism was made of wood for lack of metal parts, our flag turner was a Mindstorms motor, and our robot was held together by its string suspension system. Our first competition, the FTC qualifier at Saratoga High School, we fell apart. Literally: the robot was in pieces, the competition had been Murphy\u2019s Law at it\u2019s finest.",
+                "After the competition we were in shock, but after a few days we came to and set at work to rebuild a better robot. Over Thanksgiving break we sat in one of our team leads\u2019 living room and decided upon major points: points were our goal as opposed to blocks, we needed more parts to have any hope of being competitive, and that accepting that our first robot had failed was important in us moving on to the next robot. In the weeks following that meeting we crunched and were able to build our second robot, just barely in time for our second qualifier at Valley Christian High School. Our second robot was the antithesis of our first: where the first had been a blind attempt to score block points, our second was a sleek, barebones robot which aimed to score as many points as we could while still allowing us to build it in under a month. Our second robot virtually ignored the baskets and blocks, aiming to score as many peripheral points as possible (50 from hanging, 35 from the flag, 20 for being on the ramp at the end of autonomous, and finally 20\/40 from a blindly dumped autonomous block).",
+                "The robot was an unprecedented success, although kinks in the design held us back in the standings, we obtained the highest block scores in each competition which we competed at. Sadly, we were too little, too late and were unable to qualify for the next level of FTC competition. What we did learn from the two robots was the importance in timing, a robot which could grab all of the \u201Cdifficult\u201D points during the first qualifier would be enough to qualify for the next round, but by building it for our second competition it wasn\u2019t enough to compete with the more complex \u201Cdo-it-all\u201D robots. Next year one of our biggest goals will be to build a robot which is designed to maximize points scored first, and only after we have that robot working will we either build a second robot or improve the first in order to address all elements of the game. Doing so should allow us to qualify for the next level of FTC, and lead to competitive season for our robots and team."
+            ],
+            "images": ["imgs/ftcrobot1sharpened.jpg"]
         }
     ],
     
-    "names": [
-            "Leon Cheungbaby",
-            "Panderz",
-            "FsxFreak",
-            "Kyle Cheungdaddy",
-            "Jpdstan"
-    ]
+    "members": {
+        "mentors" : [
+            { "firstname": "Christina", "lastname": "Wade",     "portrait": "" },
+            { "firstname": "Ian",       "lastname": "Hovander", "portrait": "" },
+            { "firstname": "Parker",    "lastname": "Robinson", "portrait": "" }
+        ],
+        "leads": [
+            { "firstname": "Sami",      "lastname": "Solow",    "portrait": ""
+                , "grade": 12, "title": "Team Captain"     },
+            { "firstname": "Cameron",   "lastname": "Chen",     "portrait": ""
+                , "grade": 12, "title": "Team Captain"     },
+            { "firstname": "Reuben",    "lastname": "Grossman", "portrait": ""
+                , "grade": 11, "title": "Engineering Lead" },
+            { "firstname": "Cuyler",    "lastname": "Crandall", "portrait": ""
+                , "grade": 11, "title": "Engineering Lead" },
+            { "firstname": "Leon",      "lastname": "Cheung",   "portrait": ""
+                , "grade": 12, "title": "Programming Lead" },
+            { "firstname": "Peter",     "lastname": "Skidmore", "portrait": ""
+                , "grade": 11, "title": "Programming Lead" },
+            { "firstname": "Morgan",    "lastname": "Ome",      "portrait": ""
+                , "grade": 12, "title": "Business Lead"    },
+            { "firstname": "Gracie",    "lastname": "Kober",    "portrait": ""
+                , "grade": 10, "title": "Business Lead"    },
+            { "firstname": "Esme",      "lastname": "Brachmann","portrait": ""
+                , "grade": 12, "title": "Treasurer"        },
+            { "firstname": "Meredith",  "lastname": "Nash",     "portrait": ""
+                , "grade": 10, "title": "Treasurer"        }
+        ],
+        "engineers": [
+            { "firstname": "Connor",    "lastname": "Aitken",   "portrait": "", "grade": 12 },
+            { "firstname": "Alton",     "lastname": "Shu",      "portrait": "", "grade": 11 },
+            { "firstname": "Thomas",    "lastname": "Masterson","portrait": "", "grade": 11 },
+            { "firstname": "Travis",    "lastname": "Ng",       "portrait": "", "grade": 12 },
+            { "firstname": "Isabela",   "lastname": "Acenas",   "portrait": "", "grade": 10 },
+            { "firstname": "Peter",     "lastname": "Anders",   "portrait": "", "grade": 12 },
+            { "firstname": "Tanner",    "lastname": "Gee",      "portrait": "", "grade": 12 },
+            { "firstname": "Lucy",      "lastname": "Cummings", "portrait": "", "grade": 11 },
+            { "firstname": "Michael",   "lastname": "Lee",      "portrait": "", "grade": 9  },
+            { "firstname": "Ariana",    "lastname": "Chin",     "portrait": "", "grade": 9  },
+            { "firstname": "Edward",    "lastname": "Phillips", "portrait": "", "grade": 9  },
+            { "firstname": "Jackson",   "lastname": "Gravagno", "portrait": "", "grade": 9  },
+            { "firstname": "Jason",     "lastname": "Fong",     "portrait": "", "grade": 9  },
+            { "firstname": "Rory",      "lastname": "Douglass", "portrait": "", "grade": 9  },
+            { "firstname": "Kyle",      "lastname": "Doran",    "portrait": "", "grade": 9  },
+            { "firstname": "Elijah",    "lastname": "Efanov",   "portrait": "", "grade": 9  },
+            { "firstname": "Carson",    "lastname": "Loux",     "portrait": "", "grade": 9  },
+            { "firstname": "Leland",    "lastname": "Hsu",      "portrait": "", "grade": 9  },
+            { "firstname": "Frankie", "lastname": "Maychrowite","portrait": "", "grade": 9  },
+            { "firstname": "Priya",     "lastname": "Koliwad",  "portrait": "", "grade": 9  },
+            { "firstname": "Nico",      "lastname": "Mauri",    "portrait": "", "grade": 10 },
+            { "firstname": "William",   "lastname": "Kjærulff-Jørgensen","portrait": "", "grade": 11  },
+            { "firstname": "Jared",    "lastname": "Birmingham","portrait": "", "grade": 9  }
+        ],
+        "programmers": [
+            { "firstname": "Fiona",    "lastname": "Zhao",      "portrait": "", "grade": 10 },
+            { "firstname": "Sam",      "lastname": "Shih",      "portrait": "", "grade": 12 },
+            { "firstname": "Maggie",   "lastname": "Chang",     "portrait": "", "grade": 10 },
+            { "firstname": "Riley",    "lastname": "Woo",       "portrait": "", "grade": 12 },
+            { "firstname": "Hyun June","lastname": "Gill",      "portrait": "", "grade": 12 },
+            { "firstname": "Ethan",    "lastname": "Hsieh",     "portrait": "", "grade": 12 },
+            { "firstname": "Jessica",  "lastname": "Cherny",    "portrait": "", "grade": 12 },
+            { "firstname": "Katherine","lastname": "Brogan",    "portrait": "", "grade": 9  },
+            { "firstname": "Max",      "lastname": "Chakhmatov","portrait": "", "grade": 11 },
+            { "firstname": "Maddie",   "lastname": "Cheyette",  "portrait": "", "grade": 12 },
+            { "firstname": "Emily",    "lastname": "Tam",       "portrait": "", "grade": 9  },
+            { "firstname": "Kimberly", "lastname": "Wang",      "portrait": "", "grade": 9  },
+            { "firstname": "Chase",    "lastname": "Maramgu",   "portrait": "", "grade": 9  },
+            { "firstname": "Isabel",   "lastname": "Dominik",   "portrait": "", "grade": 9  },
+            { "firstname": "Colin",    "lastname": "Murphy",    "portrait": "", "grade": 11 },
+            { "firstname": "Austin",   "lastname": "Soohoo",    "portrait": "", "grade": 9  }
+        ],
+        "business": [
+            { "firstname": "David",    "lastname": "Zhou",      "portrait": "", "grade": 11 },
+            { "firstname": "Valerie",  "lastname": "Hon",       "portrait": "", "grade": 10 },
+            { "firstname": "Dara",     "lastname": "Phung",     "portrait": "", "grade": 10 },
+            { "firstname": "Sonia",    "lastname": "Varah",     "portrait": "", "grade": 10 },
+            { "firstname": "Andrew",   "lastname": "Ezersky",   "portrait": "", "grade": 12 },
+            { "firstname": "Dana",     "lastname": "Wang",      "portrait": "", "grade": 9  },
+            { "firstname": "Carolyn",  "lastname": "Tang",      "portrait": "", "grade": 9  },
+            { "firstname": "Clare",    "lastname": "Lei",       "portrait": "", "grade": 9  },
+            { "firstname": "Chelsea",  "lastname": "Lo",        "portrait": "", "grade": 9  },
+            { "firstname": "Tegan",    "lastname": "Alberts",   "portrait": "", "grade": 9  },
+            { "firstname": "Meghan",   "lastname": "Hockridge", "portrait": "", "grade": 9  },
+            { "firstname": "Grace",    "lastname": "Colson",    "portrait": "", "grade": 9  },
+            { "firstname": "Malia",    "lastname": "Smith",     "portrait": "", "grade": 11 },
+            { "firstname": "Logan",    "lastname": "Aitken",    "portrait": "", "grade": 9  },
+            { "firstname": "Kaeley",   "lastname": "Rollins",   "portrait": "", "grade": 9  },
+            { "firstname": "Siobhan",  "lastname": "Healy",     "portrait": "", "grade": 9  },
+            { "firstname": "Mary",     "lastname": "Perez",     "portrait": "", "grade": 12 },
+            { "firstname": "Ellie",    "lastname": "Feder",     "portrait": "", "grade": 9  },
+            { "firstname": "Ariel",    "lastname": "Hsieh",     "portrait": "", "grade": 9  },
+            { "firstname": "Ariana",   "lastname": "Chin",      "portrait": "", "grade": 9  },
+            { "firstname": "Kevin",    "lastname": "Taggart",   "portrait": "", "grade": 9  },
+            { "firstname": "Nina",     "lastname": "Chikanov",  "portrait": "", "grade": 12 },
+            { "firstname": "Alex",     "lastname": "Lundquist", "portrait": "", "grade": 9  },
+            { "firstname": "Jen",      "lastname": "Weeks",     "portrait": "", "grade": 9  },
+            { "firstname": "Caroline", "lastname": "Pease",     "portrait": "", "grade": 9  },
+            { "firstname": "Nicole",   "lastname": "Chin",      "portrait": "", "grade": 9  }
+        ]
+    }
 }
