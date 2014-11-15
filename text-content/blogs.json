@@ -11,6 +11,32 @@
             "images": []
         }
       , {
+            "header": "Holiday Fundraiser",
+            "author": "Christina Wade",
+            "team"  : "Advisor",
+            "date"  : ["2013", "12", "6"],
+            "paragraphs" : [
+                "Talk about spirit! The Iron Panthers brought the FTC robot to Burlingame's annual Tree Lighting Ceremony in order to show off the newly improved \"Rubicorn\" to the wider community.",
+                "<img src=\"imgs/treelighting1.jpg\"><\/img>",
+                "Kids and adults gathered around the table to gander at the mechanical beast that stood in front of them. Local politicians, choir groups, merchants, and vendors gather during the Tree Lighting Ceremony to celebrate the holidays and support the community.  We persevered, despite the rain, and received many compliments from community members.",
+                "<img src=\"imgs/treelighting2.jpg\"><\/img>"
+                
+            ],
+            "images": ["imgs/treelighting0.jpg"]
+        }
+      , {
+            "header": "Bag and Tag Fundraiser",
+            "author": "Christina Wade", 
+            "team"  : "Advisor",
+            "date"  : ["2014", "2", "21"],
+            "paragraphs" : [
+                "On February 20th, the Iron Panthers held their first annual Bag and Tag Fundraiser Dinner. We raised not only over $1000, but also awareness of and support for the team! Wow! Not too shabby for a rookie team! Guests were able to see demonstrations of both the FTC and the FRC robots, as well as watch the Chairman's Award video and Robot Release video as we unveiled the \"Deadliest Catch.\" We also presented a <a href=\"http://prezi.com/jkgenwbyud1w/burlingame-robotics-team/\">Prezi<\/a> detailing our journey thus far.",
+                "<img src=\"imgs/bagandtag1.jpg\" alt=\"Dinner presentations\"><\/img>",
+                "After a dinner provided by Iron Panther chefs and local businesses such as Crepevine, some guests were able to drive the FTC robot, raising the flag and hanging from the pull-up bar. Aside from Iron Panthers families and BHS teachers, major community members also attended, including Burlingame mayor Michael Brownrigg."
+            ],
+            "images": ["imgs/bagandtag0.jpg"]
+        }
+      , {
             "header": "Blocks don't matter: points do.",
             "author": "Cuyler Crandall",
             "team"  : "Engineering Lead",
@@ -21,32 +47,6 @@
                 "The robot was an unprecedented success, although kinks in the design held us back in the standings, we obtained the highest block scores in each competition which we competed at. Sadly, we were too little, too late and were unable to qualify for the next level of FTC competition. What we did learn from the two robots was the importance in timing, a robot which could grab all of the \u201Cdifficult\u201D points during the first qualifier would be enough to qualify for the next round, but by building it for our second competition it wasn\u2019t enough to compete with the more complex \u201Cdo-it-all\u201D robots. Next year one of our biggest goals will be to build a robot which is designed to maximize points scored first, and only after we have that robot working will we either build a second robot or improve the first in order to address all elements of the game. Doing so should allow us to qualify for the next level of FTC, and lead to competitive season for our robots and team."
             ],
             "images": ["imgs/ftcrobot1sharpened.jpg"]
-        }
-      , {
-            "header": "Bag and Tag Fundraiser",
-            "author": "Christina Wade", 
-            "team"  : "Advisor",
-            "date"  : ["2014", "8", "20"],
-            "paragraphs" : [
-                "On February 20th, the Iron Panthers held their first annual Bag and Tag Fundraiser Dinner. We raised not only over $1000, but also awareness of and support for the team! Wow! Not too shabby for a rookie team! Guests were able to see demonstrations of both the FTC and the FRC robots, as well as watch the Chairman's Award video and Robot Release video as we unveiled the \"Deadliest Catch.\" We also presented a <a href=\"http://prezi.com/jkgenwbyud1w/burlingame-robotics-team/\">Prezi<\/a> detailing our journey thus far.",
-                "<img src=\"imgs/bagandtag1.jpg\" alt=\"Dinner presentations\"><\/img>",
-                "After a dinner provided by Iron Panther chefs and local businesses such as Crepevine, some guests were able to drive the FTC robot, raising the flag and hanging from the pull-up bar. Aside from Iron Panthers families and BHS teachers, major community members also attended, including Burlingame mayor Michael Brownrigg."
-            ],
-            "images": ["imgs/bagandtag0.jpg"]
-        }
-      , {
-            "header": "Holiday Fundraiser",
-            "author": "Christina Wade",
-            "team"  : "Advisor",
-            "date"  : ["2014", "8", "20"],
-            "paragraphs" : [
-                "Talk about spirit! The Iron Panthers brought the FTC robot to Burlingame's annual Tree Lighting Ceremony in order to show off the newly improved \"Rubicorn\" to the wider community.",
-                "<img src=\"imgs/treelighting1.jpg\"><\/img>",
-                "Kids and adults gathered around the table to gander at the mechanical beast that stood in front of them. Local politicians, choir groups, merchants, and vendors gather during the Tree Lighting Ceremony to celebrate the holidays and support the community.  We persevered, despite the rain, and received many compliments from community members.",
-                "<img src=\"imgs/treelighting2.jpg\"><\/img>"
-                
-            ],
-            "images": ["imgs/treelighting0.jpg"]
         }
     ],
     
@@ -67,8 +67,8 @@
                 , "grade": 11, "title": "Engineering Lead" },
             { "firstname": "Leon",      "lastname": "Cheung",   "portrait": ""
                 , "grade": 12, "title": "Programming Lead" },
-            { "firstname": "Sam",       "lastname": "Shih",     "portrait": ""
-                , "grade": 12, "title": "Programming Lead" },
+            { "firstname": "Peter",     "lastname": "Skidmore", "portrait": ""
+                , "grade": 11, "title": "Programming Lead" },
             { "firstname": "Morgan",    "lastname": "Ome",      "portrait": ""
                 , "grade": 12, "title": "Business Lead"    },
             { "firstname": "Gracie",    "lastname": "Kober",    "portrait": ""
@@ -105,7 +105,7 @@
         ],
         "programmers": [
             { "firstname": "Fiona",    "lastname": "Zhao",      "portrait": "", "grade": 10 },
-            { "firstname": "Peter",    "lastname": "Skidmore",  "portrait": "", "grade": 11 },
+            { "firstname": "Sam",      "lastname": "Shih",      "portrait": "", "grade": 12 },
             { "firstname": "Maggie",   "lastname": "Chang",     "portrait": "", "grade": 10 },
             { "firstname": "Riley",    "lastname": "Woo",       "portrait": "", "grade": 12 },
             { "firstname": "Hyun June","lastname": "Gill",      "portrait": "", "grade": 12 },

@@ -3,7 +3,6 @@
 	<header>
 		<span><time x-iso-time="{{ blogs[blog_id].date.toISOString() }}">{{ blogs[blog_id].getDatePlain() }}</time></span>
 		<h1 id="topOfBlog">{{ blogs[blog_id].header }}</h1>
-		<h2>—{{ blogs[blog_id].author }}, {{ blogs[blog_id].team }}</h2>
 	</header>
     <img ng-show="blogs[blog_id].images.length" ng-src="{{ blogs[blog_id].images[0] }}" />
 	<p id="postPreview" ng-repeat="text in blogs[blog_id].paragraphs" ng-bind-html="text"></p>
