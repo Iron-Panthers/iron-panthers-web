@@ -85,6 +85,9 @@
                 when('/contact', {
                     templateUrl: 'pages/contact.html',
                 }).
+                when('/eblog', {
+                    templateUrl: 'pages/eblog.html',
+                }).
                 otherwise({
                     redirectTo: '/'
                 });
@@ -265,8 +268,9 @@
 })();
 
 function randomizeImage() {
-    var totalBgImgs = 15;
-    var img = Math.floor(Math.random() * totalBgImgs);
+    var bannerMin = 10;
+    var bannerMax = 20;
+    var img = Math.floor(Math.random() * (bannerMax - bannerMin + 1)) + bannerMin;
     var header = document.body.children[0];
     var path = "imgs/banners/banner" + img + ".jpg";
     header.style.backgroundImage = "url('" + path + "')";

@@ -48,6 +48,16 @@
             ],
             "images": ["imgs/ftcrobot1sharpened.jpg"]
         }
+      , {
+            "header": "Check out the new E-Blog!",
+            "author": "Leon Cheung",
+            "team"  : "Webmaster",
+            "date"  : ["2014", "12", "14"],
+            "paragraphs" : [
+                "Starting January 3rd, the engineering and programming teams will be posting frequently to the E-Blog about updates on our robot design, build, and code. Check often for updates during the new FRC 2015 season! The E-Blog is located conveniently in the navigation bar at the top of the page."
+            ],
+            "images": ["imgs/calgames1.jpg"]
+        }
     ],
     
     "members": {
