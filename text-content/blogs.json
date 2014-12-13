@@ -58,13 +58,24 @@
             ],
             "images": ["imgs/calgames1.jpg"]
         }
+      , {
+            "header": "Movie Night Fundraiser",
+            "author": "Leon Cheung",
+            "team"  : "Webmaster",
+            "date"  : ["2014", "12", "14"],
+            "paragraphs" : [
+                "As part of our continued fundraising effort to raise money for competition registration fees and robot components, the Iron Panthers hosted a community movie night. Children gathered around to have fun watching Elf and eating pizza. We plan to hold another similar fundraiser near Valentine's Day to meet part of our goal to register for the FRC regionals held at UC Davis, in addition to the regionals at San Jose State University, both of which we will attend early next year."
+            ],
+            "images": ["imgs/fundraisermovie.jpg"]
+        }
     ],
     
     "members": {
         "mentors" : [
             { "firstname": "Christina", "lastname": "Wade",     "portrait": "" },
             { "firstname": "Ian",       "lastname": "Hovander", "portrait": "" },
-            { "firstname": "Parker",    "lastname": "Robinson", "portrait": "" }
+            { "firstname": "Parker",    "lastname": "Robinson", "portrait": "" },
+            { "firstname": "Rahul",     "lastname": "Kar",      "portrait": "" }
         ],
         "leads": [
             { "firstname": "Sami",      "lastname": "Solow",    "portrait": ""
