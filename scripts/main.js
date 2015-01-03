@@ -83,10 +83,13 @@
                     controller: 'BlogController'
                 }).
                 when('/contact', {
-                    templateUrl: 'pages/contact.html',
+                    templateUrl: 'pages/contact.html'
                 }).
                 when('/eblog', {
-                    templateUrl: 'pages/eblog.html',
+                    templateUrl: 'pages/eblog.html'
+                }).
+                when('/resources', {
+                    templateUrl: 'pages/resources.html'
                 }).
                 otherwise({
                     redirectTo: '/'
