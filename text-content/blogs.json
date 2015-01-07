@@ -82,6 +82,18 @@
             ],
             "images": ["imgs/ftcaward2.jpg"]
         }
+      , {
+            "header": "Recycle Rush Kickoff at Woodside High School",
+            "author": "Morgan Ome",
+            "team"  : "Business Lead",
+            "date"  : ["2015", "1", "4"],
+            "paragraphs" : [
+                "As the rest of the world slept beneath a dense blanket of Bay Area fog, the Iron Panthers abandoned their warm beds to go to Woodside High School for the 2015 FRC Season Kickoff. The robotics community at large had been eagerly anticipating the highly secretive FRC Challenge, and after a long build up, were thrilled at the release of Recycle Rush.",
+                "The Iron Panthers in conjunction with Woodside and Carlmont High Schools’ team, the Wild Hats, hosted Kickoff. Ten local teams from around the Bay Area attended. Together, the students mingled and talked, discussed and shared as the new challenge was unveiled. Following the broadcast of Recycle Rush, members of BHS and the Wild Hats led breakout discussion groups in which students shared possible strategies, asked questions, and brainstormed ideas for methods of approaching this year’s challenge. Some of the groups included Offensive Strategy, Scouting, Autonomous Strategy, and Points.",
+                "The Iron Panthers were honored to help the Wild Hats host Kickoff and look forward to a incredible, albeit busy season."
+            ],
+            "images": ["imgs/frcrrkickoff0.jpg"]
+        }
     ],
     
     "members": {
