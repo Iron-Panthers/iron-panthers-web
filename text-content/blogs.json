@@ -141,11 +141,9 @@
             { "firstname": "Wilard",    "lastname": "Tan",      "portrait": "", "grade": 9  }
         ],
         "programmers": [
-            { "firstname": "Sam",      "lastname": "Shih",      "portrait": "", "grade": 12 },
             { "firstname": "Maggie",   "lastname": "Chang",     "portrait": "", "grade": 10 },
             { "firstname": "Riley",    "lastname": "Woo",       "portrait": "", "grade": 12 },
             { "firstname": "Hyun June","lastname": "Gill",      "portrait": "", "grade": 12 },
-            { "firstname": "Jessica",  "lastname": "Cherny",    "portrait": "", "grade": 12 },
             { "firstname": "Katherine","lastname": "Brogan",    "portrait": "", "grade": 9  },
             { "firstname": "Max",      "lastname": "Chakhmatov","portrait": "", "grade": 11 },
             { "firstname": "Emily",    "lastname": "Tam",       "portrait": "", "grade": 9  },
