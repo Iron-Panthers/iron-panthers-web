@@ -101,7 +101,8 @@
             { "firstname": "Christina", "lastname": "Wade",     "portrait": "" },
             { "firstname": "Ian",       "lastname": "Hovander", "portrait": "" },
             { "firstname": "Parker",    "lastname": "Robinson", "portrait": "" },
-            { "firstname": "Rahul",     "lastname": "Kar",      "portrait": "" }
+            { "firstname": "Rahul",     "lastname": "Kar",      "portrait": "" },
+            { "firstname": "Dennis",    "lastname": "Millstein","portrait": "" }
         ],
         "leads": [
             { "firstname": "Sami",      "lastname": "Solow",    "portrait": ""
@@ -112,6 +113,8 @@
                 , "grade": 11, "title": "Engineering Lead" },
             { "firstname": "Cuyler",    "lastname": "Crandall", "portrait": ""
                 , "grade": 11, "title": "Engineering Lead" },
+            { "firstname": "Connor",    "lastname": "Aitken",   "portrait": ""
+                , "grade": 12, "title": "Engineering Lead" },    
             { "firstname": "Leon",      "lastname": "Cheung",   "portrait": ""
                 , "grade": 12, "title": "Programming Lead" },
             { "firstname": "Peter",     "lastname": "Skidmore", "portrait": ""
@@ -124,7 +127,6 @@
                 , "grade": 10, "title": "Treasurer"        }
         ],
         "engineers": [
-            { "firstname": "Connor",    "lastname": "Aitken",   "portrait": "", "grade": 12 },
             { "firstname": "Alton",     "lastname": "Shu",      "portrait": "", "grade": 11 },
             { "firstname": "Thomas",    "lastname": "Masterson","portrait": "", "grade": 11 },
             { "firstname": "Isabela",   "lastname": "Acenas",   "portrait": "", "grade": 10 },
