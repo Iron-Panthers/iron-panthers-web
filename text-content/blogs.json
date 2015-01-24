@@ -129,10 +129,8 @@
         "engineers": [
             { "firstname": "Alton",     "lastname": "Shu",      "portrait": "", "grade": 11 },
             { "firstname": "Thomas",    "lastname": "Masterson","portrait": "", "grade": 11 },
-            { "firstname": "Isabela",   "lastname": "Acenas",   "portrait": "", "grade": 10 },
             { "firstname": "Peter",     "lastname": "Anders",   "portrait": "", "grade": 12 },
             { "firstname": "Lucy",      "lastname": "Cummings", "portrait": "", "grade": 11 },
-            { "firstname": "Michael",   "lastname": "Lee",      "portrait": "", "grade": 9  },
             { "firstname": "Stella",    "lastname": "Yang",     "portrait": "", "grade": 9  },
             { "firstname": "Jackson",   "lastname": "Gravagno", "portrait": "", "grade": 9  },
             { "firstname": "Jason",     "lastname": "Fong",     "portrait": "", "grade": 9  },
@@ -144,8 +142,6 @@
         ],
         "programmers": [
             { "firstname": "Maggie",   "lastname": "Chang",     "portrait": "", "grade": 10 },
-            { "firstname": "Riley",    "lastname": "Woo",       "portrait": "", "grade": 12 },
-            { "firstname": "Hyun June","lastname": "Gill",      "portrait": "", "grade": 12 },
             { "firstname": "Katherine","lastname": "Brogan",    "portrait": "", "grade": 9  },
             { "firstname": "Max",      "lastname": "Chakhmatov","portrait": "", "grade": 11 },
             { "firstname": "Emily",    "lastname": "Tam",       "portrait": "", "grade": 9  },
@@ -159,15 +155,10 @@
         ],
         "business": [
             { "firstname": "David",    "lastname": "Zhou",      "portrait": "", "grade": 11 },
-            { "firstname": "Valerie",  "lastname": "Hon",       "portrait": "", "grade": 10 },
-            { "firstname": "Dara",     "lastname": "Phung",     "portrait": "", "grade": 10 },
-            { "firstname": "Dana",     "lastname": "Wang",      "portrait": "", "grade": 9  },
             { "firstname": "Tegan",    "lastname": "Alberts",   "portrait": "", "grade": 9  },
-            { "firstname": "Siobhan",  "lastname": "Healy",     "portrait": "", "grade": 10 },
-            { "firstname": "Ariana",   "lastname": "Chin",      "portrait": "", "grade": 9  },
-            { "firstname": "Alex",     "lastname": "Lundquist", "portrait": "", "grade": 9  },
             { "firstname": "Caroline", "lastname": "Pease",     "portrait": "", "grade": 9  },
-            { "firstname": "Esme",     "lastname": "Brachmann", "portrait": "", "grade": 12 },
+            { "firstname": "Carolyn",  "lastname": "Tang",      "portrait": "", "grade": 9  },
+            { "firstname": "Mary",     "lastname": "Perez",     "portrait": "", "grade": 9  },
             { "firstname": "Kevin",    "lastname": "Taggart",   "portrait": "", "grade": 9  }
         ]
     }
