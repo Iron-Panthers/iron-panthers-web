@@ -97,6 +97,9 @@
                 when('/sponsors', {
                     templateUrl: 'pages/sponsors.html'
                 }).
+                when('/publicity', {
+                    templateUrl: 'pages/publicity.html'
+                }).
                 otherwise({
                     redirectTo: '/'
                 });

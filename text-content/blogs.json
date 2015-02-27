@@ -94,6 +94,20 @@
             ],
             "images": ["imgs/frcrrkickoff0.jpg"]
         }
+      , {
+            "header": "Students from team complete in local hackathon HSHacks",
+            "author": "Leon Cheung",
+            "team"  : "Webmaster",
+            "date"  : ["2015", "2", "9"],
+            "paragraphs" : [
+                "At the PayPal headquarters in San Jose, programmers Max Chakhmatov, Leon Cheung, Peter Skidmore, and Austin Soohoo worked through the night to complete the project they call Gyst.",
+                "According to Chakhmatov,",
+                "\"What we did at the hackathon was a cool little project. In the Burlingame robotics programming team we use a website or a service called Asana. In Asana we can assign each other tasks and assignments. So we came up an idea to make a homemade Asana. It was going well until we realized that we had to build a library to make it work. In the end we did not really care if it worked or not. The reason why we went on the hackathon was because its a great learning experience. That's what really matters in the end.\"",
+                "Pronounced as \"geist\", it integrates together task management and the code base, allowing task creators and commenters to make inline references to relevant source code.",
+                "If you're interested in the code, it can be found on <a href=\"https://github.com/ptskidmore/Gyst\">GitHub</a>."
+            ],
+            "images": ["imgs/hackathon.jpg"]
+        }  
     ],
     
     "members": {
@@ -129,7 +143,6 @@
         "engineers": [
             { "firstname": "Alton",     "lastname": "Shu",      "portrait": "", "grade": 11 },
             { "firstname": "Thomas",    "lastname": "Masterson","portrait": "", "grade": 11 },
-            { "firstname": "Peter",     "lastname": "Anders",   "portrait": "", "grade": 10 },
             { "firstname": "Lucy",      "lastname": "Cummings", "portrait": "", "grade": 11 },
             { "firstname": "Stella",    "lastname": "Yang",     "portrait": "", "grade": 9  },
             { "firstname": "Jackson",   "lastname": "Gravagno", "portrait": "", "grade": 9  },
@@ -150,7 +163,6 @@
             { "firstname": "Isabel",   "lastname": "Dominik",   "portrait": "", "grade": 9  },
             { "firstname": "Colin",    "lastname": "Murphy",    "portrait": "", "grade": 11 },
             { "firstname": "Austin",   "lastname": "Soohoo",    "portrait": "", "grade": 9  },
-            { "firstname": "Michael",  "lastname": "Luo",       "portrait": "", "grade": 11 },
             { "firstname": "Suhas",    "lastname": "Mohan",     "portrait": "", "grade": 11 }
         ],
         "business": [
