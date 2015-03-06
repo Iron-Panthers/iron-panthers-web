@@ -107,7 +107,17 @@
                 "If you're interested in the code, it can be found on <a href=\"https://github.com/ptskidmore/Gyst\">GitHub</a>."
             ],
             "images": ["imgs/hackathon.jpg"]
-        }  
+        }
+        , {
+            "header": "Presentation, dinner, and more at our Bag and Tag Dinner 2015!",
+            "author": "Christina Wade",
+            "team"  : "Webmaster",
+            "date"  : ["2015", "3", "5"],
+            "paragraphs" : [
+                "Tomorrow is our Bag and Tag Fundraising Dinner!!!! Come on by for good food and to see our robot. We will be having a silent auction with items donated to us from local businesses including Gap, David's Tea and Books Inc. There will also be a GoPro Camera and accessories up for auction as well as other surprise items!!!!"
+            ],
+            "images": ["imgs/frcbagandtag2015invitation.png"]
+        }    
     ],
     
     "members": {
