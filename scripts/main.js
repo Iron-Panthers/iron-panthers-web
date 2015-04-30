@@ -280,8 +280,8 @@
 })();
 
 function randomizeImage() {
-    var bannerMin = 10;
-    var bannerMax = 20;
+    var bannerMin = 11;
+    var bannerMax = 21;
     var img = Math.floor(Math.random() * (bannerMax - bannerMin + 1)) + bannerMin;
     var header = document.body.children[0];
     var path = "imgs/banners/banner" + img + ".jpg";
