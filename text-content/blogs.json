@@ -108,7 +108,7 @@
             ],
             "images": ["imgs/hackathon.jpg"]
         }
-        , {
+      , {
             "header": "Presentation, dinner, and more at our Bag and Tag Dinner 2015!",
             "author": "Christina Wade",
             "team"  : "Webmaster",
@@ -118,6 +118,18 @@
             ],
             "images": ["imgs/frcbagandtag2015invitation.png"]
         }    
+      , {
+            "header": "The Iron Panthers at the Sacramento and Silicon Valley Regionals",
+            "author": "Sami Solow",
+            "team"  : "Business",
+            "date"  : ["2015", "4", "29"],
+            "paragraphs" : [
+                "From Thursday, April 2nd to Saturday, April 4th, the Burlingame Iron Panthers competed in our second competition at the FRC Silicon Valley Regional. We, along with 57 other teams, took part in the challenge called Recycle Rush, where robots of all different designs stacked recycling totes and containers for points. After some additions to the robot, our team was very successful at the competition, and our alliance placed 3rd overall!",
+                "After competing at the first regional the Iron Panthers competed in, the Sacramento Regional, a few changes were made to the robot so that it was able to grab recycling containers from the middle of the field during the autonomous (pre-programmed function) period. This function of the robot was something other robots did not have and while the robot was not as efficient at stacking totes, this specific aspect of the robot made it very useful to teams that needed the containers.",
+                "Because our robot was able to pull in the recycling containers so quickly at the beginning of the match we were selected by the third-seeded alliance.  Our new alliance partners were the Funky Monkeys (team 846) and Team Kika Mana (team 368) all the way from Hawaii!  We were thrilled to get picked, and we knew we had a good chance going into the matches.  Our alliance did an amazing job in the elimination matches, and we made it to the semi-finals. Unfortunately, we were unable to beat the top two-seeded alliances due to some technical issues, but we placed third overall!  It was so exciting for our team to place so well after a tough competition at the Sacramento Regional.  For a second year team we are extremely proud of what we have accomplished, and we are so excited to challenge ourselves in the years to come!"
+            ],
+            "images": ["imgs/frcsvr0.jpg"]
+        }
     ],
     
     "members": {
