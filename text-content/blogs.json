@@ -137,7 +137,6 @@
             { "firstname": "Christina", "lastname": "Wade",     "portrait": "" },
             { "firstname": "Ian",       "lastname": "Hovander", "portrait": "" },
             { "firstname": "Parker",    "lastname": "Robinson", "portrait": "" },
-            { "firstname": "Rahul",     "lastname": "Kar",      "portrait": "" },
             { "firstname": "Dennis",    "lastname": "Millstein","portrait": "" }
         ],
         "leads": [
@@ -172,20 +171,13 @@
             { "firstname": "Rory",      "lastname": "Douglass", "portrait": "", "grade": 9  },
             { "firstname": "Kyle",      "lastname": "Doran",    "portrait": "", "grade": 9  },
             { "firstname": "William",   "lastname": "Kjærulff-Jørgensen","portrait": "", "grade": 11  },
-            { "firstname": "Jared",    "lastname": "Birmingham","portrait": "", "grade": 9  },
-            { "firstname": "Wilard",    "lastname": "Tan",      "portrait": "", "grade": 9  }
+            { "firstname": "Jared",     "lastname": "Birmingham","portrait": "", "grade": 9 }
         ],
         "programmers": [
-            { "firstname": "Maggie",   "lastname": "Chang",     "portrait": "", "grade": 10 },
-            { "firstname": "Katherine","lastname": "Brogan",    "portrait": "", "grade": 10 },
             { "firstname": "Max",      "lastname": "Chakhmatov","portrait": "", "grade": 11 },
-            { "firstname": "Emily",    "lastname": "Tam",       "portrait": "", "grade": 9  },
-            { "firstname": "Kimberly", "lastname": "Wang",      "portrait": "", "grade": 9  },
             { "firstname": "Chase",    "lastname": "Maramgu",   "portrait": "", "grade": 9  },
             { "firstname": "Isabel",   "lastname": "Dominik",   "portrait": "", "grade": 9  },
-            { "firstname": "Colin",    "lastname": "Murphy",    "portrait": "", "grade": 11 },
-            { "firstname": "Austin",   "lastname": "Soohoo",    "portrait": "", "grade": 9  },
-            { "firstname": "Suhas",    "lastname": "Mohan",     "portrait": "", "grade": 11 }
+            { "firstname": "Austin",   "lastname": "Soohoo",    "portrait": "", "grade": 9  }
         ],
         "business": [
             { "firstname": "David",    "lastname": "Zhou",      "portrait": "", "grade": 11 },
